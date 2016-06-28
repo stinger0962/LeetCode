@@ -1,5 +1,5 @@
 # Summary
 
 * [Introduction](README.md)
-* Array
+* [Array](array.md)
 
