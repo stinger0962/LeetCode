@@ -1,3 +1,8 @@
-# My Awesome Book
+# Solutions to LeetCode OJ
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+
+I will try to keep updating and optimizing my own solutions, as well as my understandings to LeetCode problems.
+
+
+
+
