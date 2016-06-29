@@ -19,7 +19,7 @@ But the following [1,2,2,null,3,null,3] is not:
    3    3```
    
    Note:
-Bonus points if you could solve it both recursively and iteratively.
+Bonus points if you could solve it both **recursively** and **iteratively**.
 
 
 
@@ -73,4 +73,83 @@ private:
         }
             
     }
+};```
+
+
+  Solving the problem iteratively boils down to the algorithm of an inorder tree traversal without recursion.
+  
+  Using a custom **stack** (std::vector in C++) is the way to achieve the goal. We need to store the subtree in a container with LIFO(last-in-first-out) property.
+  
+  Below is a common algorithm found online.
+  
+
+>   1.  Create an empty stack S.
+  2.  Initialize current node as root
+  3. Push the current node to S and set current = current->left until current is NULL
+  4. If current is NULL and stack is not empty then 
+     a) Pop the top item from stack.
+     b) Print the popped item, set current = popped_item->right 
+     c) Go to step 3.
+  5. If current is NULL and stack is empty then we are done.
+
+
+  
+  My implementation traverses the left and right subtrees simultaneously, check their symmetricity in both data and shape, and terminate the loop early whenever a symmetric test fails.
+  
+  ```/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    bool isSymmetric(TreeNode* root) 
+    {
+        if(root == nullptr)
+        {
+            return true;
+        }
+        vector<TreeNode*> leftTree; // using stack to traverse tree without recursion
+        vector<TreeNode*> rightTree;
+        TreeNode* leftCur = root;
+        TreeNode* rightCur = root;
+        while(leftTree.size() != 0 || leftCur != nullptr)
+        {
+            while(leftCur != nullptr) // simultaneously traverse left subtree inorder and right subtree reversely, terminate the loop early if certain conditions are met
+            {
+                if(rightCur == nullptr) // when the left subtree is deeper than the right one
+                {
+                    return false;
+                }
+                if(leftCur->val != rightCur->val) // compare value of nodes at symmetric positions
+                {
+                    return false;
+                }
+                leftTree.push_back(leftCur);
+                leftCur = leftCur->left;
+                rightTree.push_back(rightCur);
+                rightCur = rightCur->right;
+            }
+            if(rightCur != nullptr) // when the right subtree is deeper than the left one
+            {
+                return false;
+            }
+            leftCur = leftTree.back()->right;
+            leftTree.pop_back();
+            rightCur = rightTree.back()->left;
+            rightTree.pop_back();
+            
+        } // done with the travesal of the left subtree
+        if(rightTree.size() !=0 || rightCur != nullptr) // 
+        {
+            return false;
+        }
+        return true;
+    }
+private:
+   
 };```
