@@ -5,5 +5,5 @@
    * [1.1 Two Sum](11_two_sum.md)
 * [2. Tree](tree.md)
    * [2.1 Symmetric Tree](21_symmetric_tree.md)
-* 5. Bitwise Operator
+* 5. Bit wise Operator
 
