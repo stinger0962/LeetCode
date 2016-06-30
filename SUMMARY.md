@@ -8,5 +8,5 @@
 * [5. Bitwise Operator](bitwise_operator.md)
    * [Bitwise AND of Numbers of Range](bitwise_and_of_numbers_of_range.md)
 * [3. Linked List](linked_list.md)
-   * [Add Two Numbers](add_two_numbers.md)
+   * [3.1 Add Two Numbers](add_two_numbers.md)
 
