@@ -7,6 +7,6 @@
    * [2.1 Symmetric Tree](21_symmetric_tree.md)
 * [5. Bitwise Operator](bitwise_operator.md)
    * [Bitwise AND of Numbers of Range](bitwise_and_of_numbers_of_range.md)
-* [Linked List](linked_list.md)
+* [3. Linked List](linked_list.md)
    * Add Two Numbers
 
