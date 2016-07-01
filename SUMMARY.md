@@ -12,5 +12,4 @@
    * [5.1 Bitwise AND of Numbers of Range](bitwise_and_of_numbers_of_range.md)
 * [Hash Table](hash_table.md)
    * Happy Number
-   * Happy Number
 
