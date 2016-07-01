@@ -33,7 +33,7 @@ There are two cases for each number -- being happy, or unhappy. Each case asks t
 
 After making the right decision about what data structure to use, the rest part of the problem is quite straightforward.
 
-*My runtime is 9ms, while most implementations involving math finish at 4 ms. The tradeoff between an easily understanding code and 5ms runtime is worth to me, at least at this moment*
+*My runtime is 9ms, while most implementations involving math finish at 4 ms. The tradeoff between an easy-to-understand code and 5ms runtime is worth to me, at least at this moment*
 
 
 
