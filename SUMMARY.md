@@ -10,6 +10,6 @@
    * [3.1 Add Two Numbers](add_two_numbers.md)
 * [5. Bitwise Operator](bitwise_operator.md)
    * [5.1 Bitwise AND of Numbers of Range](bitwise_and_of_numbers_of_range.md)
-* [Hash Table](hash_table.md)
+* [4. Hash Table](hash_table.md)
    * [Happy Number](happy_number.md)
 
