@@ -12,5 +12,5 @@
    * [4.1 Happy Number](happy_number.md)
 * [5. Bitwise Operator](bitwise_operator.md)
    * [5.1 Bitwise AND of Numbers of Range](bitwise_and_of_numbers_of_range.md)
-* String
+* [String](string.md)
 
