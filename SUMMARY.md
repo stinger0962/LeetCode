@@ -6,7 +6,7 @@
 * [2. Tree](tree.md)
    * [2.1 Symmetric Tree](21_symmetric_tree.md)
    * [2.2 Binary Tree Level Order Traversal](binary_tree_level_order_traversal.md)
-   * Binary Tree Zigzag Level Order Traversal
+   * [Binary Tree Zigzag Level Order Traversal](binary_tree_zigzag_level_order_traversal.md)
 * [3. Linked List](linked_list.md)
    * [3.1 Add Two Numbers](add_two_numbers.md)
 * [4. Hash Table](hash_table.md)
