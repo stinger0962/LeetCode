@@ -9,7 +9,7 @@
    * [2.3 Binary Tree Zigzag Level Order Traversal](binary_tree_zigzag_level_order_traversal.md)
 * [3. Linked List](linked_list.md)
    * [3.1 Add Two Numbers](add_two_numbers.md)
-   * Remove Linked List Elements
+   * [Remove Linked List Elements](remove_linked_list_elements.md)
 * [4. Hash Table](hash_table.md)
    * [4.1 Happy Number](happy_number.md)
 * [5. Bitwise Operator](bitwise_operator.md)
