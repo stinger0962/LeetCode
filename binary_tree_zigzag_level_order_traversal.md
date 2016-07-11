@@ -78,7 +78,9 @@ public:
                     {
                         levelNodes.push_front(node->right);
                     }
-                    levelValues.push_back(node->val); // **Note**: could also be implemented by adding child nodes, but that will potentially double the interactions, causing inefficiency.
+                    levelValues.push_back(node->val); // **Note**: could also be implemented 
+                    // by adding child nodes, but that will potentially double the interactions, 
+                    // causing inefficiency.
                 }
                 else
                 {
