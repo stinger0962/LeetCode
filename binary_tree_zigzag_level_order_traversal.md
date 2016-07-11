@@ -30,6 +30,8 @@ The paper simulation also uncovers that there are **two patterns** of inserting/
 
 The task remained is thus no more than doing some changes on the implementaion of 2.2.
 
+Runtime is 4ms, the best we can get. Notice a block of comments about **optimizing the code**.
+
 
 
 ---
@@ -76,7 +78,7 @@ public:
                     {
                         levelNodes.push_front(node->right);
                     }
-                    levelValues.push_back(node->val);
+                    levelValues.push_back(node->val); // **Note**: could also be implemented by adding child nodes, but that will potentially double the interactions, causing inefficiency.
                 }
                 else
                 {
