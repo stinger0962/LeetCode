@@ -8,6 +8,7 @@
    * [2.1 Symmetric Tree](21_symmetric_tree.md)
    * [2.2 Binary Tree Level Order Traversal](binary_tree_level_order_traversal.md)
    * [2.3 Binary Tree Zigzag Level Order Traversal](binary_tree_zigzag_level_order_traversal.md)
+   * Maximum Depth of Binary Tree
 * [3. Linked List](linked_list.md)
    * [3.1 Add Two Numbers](add_two_numbers.md)
    * [3.2 Remove Linked List Elements](remove_linked_list_elements.md)
