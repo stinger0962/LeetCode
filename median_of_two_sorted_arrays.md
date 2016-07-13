@@ -31,7 +31,7 @@ We can make one observation, **a + b = k - 1**.
 
 Therefore, our task is reduced to **find the correct number of a and b**.
 
-
+To find a and b at a time requires complex algorithm. It is easy to **find a and b piece by piece using recursion.**
 
 
 
