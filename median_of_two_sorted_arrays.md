@@ -32,12 +32,14 @@ We can make one observation, **a + b = k - 1**.
 
 Therefore, our task is reduced to **find the correct value of a and b**.
 
-To find a and b at a time requires complex algorithm. It is easy to **find a and b piece by piece using recursion.**  
+To find a and b at a time requires complex algorithm. 
+
+It is easy to **find a and b piece by piece using recursion.**  
 
 1. **Each time** we make a **guess** of a and b, which satisfies **a + b = k**.
 2. We can prove that [**the first a elements in A**] or [**the first b elements in B**] are ensured to be smaller than k-th. We call that [**the sorted collection**] (see details in comments of the code)
 3. **Repeat the process** again, **exclude** the sorted collection, and take **new k** as k - a or k - b.
-4. **The process finishes** either elements of one array is all excluded or k is reduced to 1
+4. **The process finishes** either elements of one array is all excluded or k is reduced to 1, 
 
 
 
