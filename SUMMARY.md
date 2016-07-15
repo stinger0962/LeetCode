@@ -19,4 +19,5 @@
 * [6. String](string.md)
    * [6.1 Longest Substring Without Repeating Characters](longest_substring_without_repeating_characters.md)
 * Pure Math
+   * Count Primes
 
