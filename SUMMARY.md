@@ -20,7 +20,7 @@
 * [6. String](string.md)
    * [6.1 Longest Substring Without Repeating Characters](longest_substring_without_repeating_characters.md)
    * [6.2 Longest Palindromic Substring](longest_palindromic_substring.md)
-   * Isomorphic Strings
+   * [Isomorphic Strings](isomorphic_strings.md)
 * [7. Pure Math](pure_math.md)
    * [7.1 Count Primes](count_primes.md)
 
