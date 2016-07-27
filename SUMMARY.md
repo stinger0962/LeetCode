@@ -21,7 +21,7 @@
    * [6.1 Longest Substring Without Repeating Characters](longest_substring_without_repeating_characters.md)
    * [6.2 Longest Palindromic Substring](longest_palindromic_substring.md)
    * [6.3 Isomorphic Strings](isomorphic_strings.md)
-   * ZigZag Conversion
+   * [ZigZag Conversion](zigzag_conversion.md)
 * [7. Pure Math](pure_math.md)
    * [7.1 Count Primes](count_primes.md)
 
