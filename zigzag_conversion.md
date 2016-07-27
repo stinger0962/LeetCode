@@ -32,7 +32,7 @@ O   O N   Y H
 O M   I G   O
 D     N     O```
 
-The pattern is clear by now. 
+**The pattern is clear by now. **
 
 The first nRow chars form a straight column. 
 
@@ -73,3 +73,5 @@ public:
         return output;
     }
 };```
+
+This solution has a run time of 20ms, a little inferior to the one of 16ms, but to my observation, the latter one uses complex mathmatic to build the output string on the fly. Let's choose the one easy to understand. 
