@@ -1,4 +1,4 @@
-# ZigZag Conversion
+e can implement # ZigZag Conversion
 
 The string "PAYPALISHIRING" is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)
 
@@ -41,3 +41,35 @@ The next nRow-2 chars form a ladder like shape.
 The next nRow chars form form a straight column again.
 
 ...
+
+We can implement our algorithm following this pattern by **assigning a string to each line of the output** and combining them together when we are done.
+
+
+```
+class Solution {
+public:
+    string convert(string s, int numRows) 
+    {
+        vector<string> strByRow(numRows);
+        int i = 0;
+        while(i < s.length())
+        {
+            for(int j = 0; j < numRows && i < s.length(); ++j)
+            {
+                strByRow[j].push_back(s[i]);
+                ++i;
+            }
+            for(int j = numRows - 2; j > 0 && i < s.length(); --j)
+            {
+                strByRow[j].push_back(s[i]);
+                ++i;
+            }
+        }
+        string output = "";
+        for(int k = 0; k < strByRow.size(); ++k)
+        {
+            output.append(strByRow[k]);
+        }
+        return output;
+    }
+};```
