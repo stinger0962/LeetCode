@@ -42,7 +42,7 @@ private:
                                 int postIndex, int inStart, int inEnd)
     {
         // Ending condition
-        if(postIndex == postorder.size() || inStart > inEnd)
+        if(inStart > inEnd)
         {
             return nullptr;
         }
@@ -56,3 +56,15 @@ private:
     }
 };
 ```
+
+
+### A Word about Performance
+
+
+
+The above code has a run time of 16ms, beating 90% of others.
+
+I actually made one **small improvement in the "ending condition"** of recursion. 
+
+**I omitted checking the range of *postIndex***. The reason behind is that whenever we pass a new *postIndex* into next call, we also pass a unique pair of *inStart and inEnd*. Thus we can rely on the pair to check if we have reached the leaf node.
+
