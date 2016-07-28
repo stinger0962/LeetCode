@@ -46,7 +46,7 @@ if the tree is not empty:
 while the queue is not empty:
     record # of nodes in Q
     for # times (inner loop)
-        dequeue a node n from Q
+        access a node n from Q
         visit n's data
         enqueue n's children into Q
         dequeue n from Q
