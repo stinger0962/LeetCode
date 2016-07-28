@@ -4,7 +4,6 @@
 * [1. Array](array.md)
    * [1.1 Two Sum](11_two_sum.md)
    * [1.2 Median of Two Sorted Arrays](median_of_two_sorted_arrays.md)
-   * [1.3 Reverse Integer](reverse_integer.md)
 * [2. Tree](tree.md)
    * [2.1 Symmetric Tree](21_symmetric_tree.md)
    * [2.2 Binary Tree Level Order Traversal](binary_tree_level_order_traversal.md)
@@ -26,5 +25,6 @@
    * [6.3 Isomorphic Strings](isomorphic_strings.md)
    * [6.4 ZigZag Conversion](zigzag_conversion.md)
 * [7. Pure Math](pure_math.md)
+   * [1.3 Reverse Integer](reverse_integer.md)
    * [7.1 Count Primes](count_primes.md)
 
