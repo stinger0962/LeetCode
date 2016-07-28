@@ -11,7 +11,7 @@
    * [2.4 Maximum Depth of Binary Tree](maximum_depth_of_binary_tree.md)
    * [2.5 Construct Binary Tree from Preorder and Inorder Traversal](construct_binary_tree_from_preorder_and_inorder_tr.md)
    * [2.6 Construct Binary Tree from Inorder and Postorder Traversal](construct_binary_tree_from_inorder_and_postorder_t.md)
-   * Binary Tree Level Order Traversal II
+   * [Binary Tree Level Order Traversal II](2.7 binary_tree_level_order_traversal_ii.md)
 * [3. Linked List](linked_list.md)
    * [3.1 Add Two Numbers](add_two_numbers.md)
    * [3.2 Remove Linked List Elements](remove_linked_list_elements.md)
