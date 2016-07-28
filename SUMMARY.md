@@ -4,6 +4,7 @@
 * [1. Array](array.md)
    * [1.1 Two Sum](11_two_sum.md)
    * [1.2 Median of Two Sorted Arrays](median_of_two_sorted_arrays.md)
+   * Reverse Integer
 * [2. Tree](tree.md)
    * [2.1 Symmetric Tree](21_symmetric_tree.md)
    * [2.2 Binary Tree Level Order Traversal](binary_tree_level_order_traversal.md)
