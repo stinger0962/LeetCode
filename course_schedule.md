@@ -22,8 +22,31 @@ The input prerequisites is a graph represented by a list of edges, not adjacency
 
 
 **Hints**:
-This problem is equivalent to finding if a cycle exists in a directed graph. 
+This problem is equivalent to **finding if a cycle exists in a directed graph**. 
 
-If a cycle exists, no topological ordering exists and therefore it will be impossible to take all courses.
+**If a cycle exists**, no topological ordering exists and therefore it will be **impossible** to take all courses.
+
+
+
+---
+
+
+First, let's set up some basic knowledges.
+
+**Edge List**: (How the graph is represented)
+
+https://www.khanacademy.org/computing/computer-science/algorithms/graph-representation/a/representing-graphs
+
+
+**Topological sorting**: (Algorithm to find a topological sorting)
+
+https://en.wikipedia.org/wiki/Topological_sorting#Algorithms
+
+
+
+---
+
+
+
 
 
