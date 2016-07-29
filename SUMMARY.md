@@ -29,5 +29,5 @@
    * [7.1 Count Primes](count_primes.md)
    * [7.2 Reverse Integer](reverse_integer.md)
 * [8. Graph](graph.md)
-   * Course Schedule
+   * [Course Schedule](course_schedule.md)
 
