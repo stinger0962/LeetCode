@@ -28,5 +28,5 @@
 * [7. Pure Math](pure_math.md)
    * [7.1 Count Primes](count_primes.md)
    * [7.2 Reverse Integer](reverse_integer.md)
-* Graph
+* 8. Graph
 
