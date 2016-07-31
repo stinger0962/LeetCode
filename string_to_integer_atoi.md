@@ -32,6 +32,21 @@ Requirements for atoi:
 
 ---
 
+## Convert char '0' to int 0
+
+The technique is about how to convert ```char a = '7'``` to a  ```int 7``` ?
+
+We would need the knowledge that implicitly converting a char to int returns its ACSII code.
+Thus we will need to **remove the offset of '0'.**
+
+```
+char a = '7';
+int i_a = a - '0'; // i_a = 7
+```
+
+
+
+
 Code is thus straightforward. By the way, the accepted rate is just a little above 10%, notably low for an easy problem. 
 
 
