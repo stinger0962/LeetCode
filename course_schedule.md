@@ -68,7 +68,7 @@ DFTrecur(vertex n)
 ```
 
 **
-## The structure of a recursive function returning boolean **
+## The structure of a recursive function returning boolean
 
 
 In a scenario that one existence of certain condition means false(or true, it doesn't matter)   
