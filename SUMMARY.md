@@ -25,6 +25,7 @@
    * [6.2 Longest Palindromic Substring](longest_palindromic_substring.md)
    * [6.3 Isomorphic Strings](isomorphic_strings.md)
    * [6.4 ZigZag Conversion](zigzag_conversion.md)
+   * String to Integer (atoi)
 * [7. Pure Math](pure_math.md)
    * [7.1 Count Primes](count_primes.md)
    * [7.2 Reverse Integer](reverse_integer.md)
