@@ -12,6 +12,7 @@
    * [2.5 Construct Binary Tree from Preorder and Inorder Traversal](construct_binary_tree_from_preorder_and_inorder_tr.md)
    * [2.6 Construct Binary Tree from Inorder and Postorder Traversal](construct_binary_tree_from_inorder_and_postorder_t.md)
    * [2.7 Binary Tree Level Order Traversal II](2.7 binary_tree_level_order_traversal_ii.md)
+   * Convert Sorted Array to Binary Search Tree
 * [3. Linked List](linked_list.md)
    * [3.1 Add Two Numbers](add_two_numbers.md)
    * [3.2 Remove Linked List Elements](remove_linked_list_elements.md)
