@@ -31,6 +31,7 @@
 * [7. Pure Math](pure_math.md)
    * [7.1 Count Primes](count_primes.md)
    * [7.2 Reverse Integer](reverse_integer.md)
+   * Palindrome Number
 * [8. Graph](graph.md)
    * [8.1 Course Schedule](course_schedule.md)
 
