@@ -14,6 +14,7 @@
    * [2.7 Binary Tree Level Order Traversal II](2.7 binary_tree_level_order_traversal_ii.md)
    * [2.8 Convert Sorted Array to Binary Search Tree](convert_sorted_array_to_binary_search_tree.md)
    * [2.9 Implement Trie(Prefix Tree)](implement_trieprefix_tree.md)
+   * Convert Sorted List to Binary Search Tree
 * [3. Linked List](linked_list.md)
    * [3.1 Add Two Numbers](add_two_numbers.md)
    * [3.2 Remove Linked List Elements](remove_linked_list_elements.md)
