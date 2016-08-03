@@ -36,5 +36,5 @@
 * [8. Graph](graph.md)
    * [8.1 Course Schedule](course_schedule.md)
 * [9. Double Pointers](double_pointers.md)
-   * 9.1 Longest Substring Without Repeating Characters
+   * [9.1 Longest Substring Without Repeating Characters](91_longest_substring_without_repeating_characters.md)
 
