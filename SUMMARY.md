@@ -35,5 +35,5 @@
    * [7.3 Palindrome Number](73_palindrome_number.md)
 * [8. Graph](graph.md)
    * [8.1 Course Schedule](course_schedule.md)
-* [Double Pointers](double_pointers.md)
+* [9. Double Pointers](double_pointers.md)
 
