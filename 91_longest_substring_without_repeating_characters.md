@@ -6,18 +6,29 @@ Given a string, find the length of the longest substring without repeating chara
 
 
 ---
+### Read substring reversely
 
-### Time Complexity: O(N) 
+The trick here is that we don't treat a substring from left to right. Inversely, we loop through the string, check the possible longest substring left to each character. 
 
 
-We use double pointers to solve the problem. Between these two pointers is the longest substring without repeating characters we are building.
 
-The right pointer loops through the string. 
+### The O(N) Algorithm  
 
-When it encounters a character C that has already appeared before, we compare the last found position of C and the left pointer. 
 
-If C's last found position is smaller than the left pointer -- which means C is not part of our substring yet -- we can safely add C to the substring. Nothing changes. 
+We use **double pointers** to solve the problem. **Between these two pointers is the longest substring** without repeating characters we are building.
 
+1. The right pointer loops through the string. 
+
+2. When it encounters a character C that has already appeared before, we **compare the last found position of C and the left pointer**. 
+
+3. If C's last found position is **smaller** than the left pointer -- which means C is not part of our substring -- we can safely add C to the substring. Nothing changes. 
+
+4. If C's last found position is **greater** than the left pointer, then C is alreayd in the substring. To avoid repeating, we move left pointer to the right of C's last found position. 
+
+5. We update the max length of substring as necessary before the right pointer move ahead.
+
+
+### The Code
 
 With a total understanding of the fundamental concepts, the code is surprisingly concise.
 
