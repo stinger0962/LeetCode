@@ -29,7 +29,7 @@
    * [6.3 Isomorphic Strings](isomorphic_strings.md)
    * [6.4 ZigZag Conversion](zigzag_conversion.md)
    * [String to Integer (atoi)](string_to_integer_atoi.md)
-   * Regular Expression Match
+   * [Regular Expression Match](6.5 regular_expression_match.md)
 * [7. Pure Math](pure_math.md)
    * [7.1 Count Primes](count_primes.md)
    * [7.2 Reverse Integer](reverse_integer.md)
