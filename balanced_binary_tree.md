@@ -28,7 +28,7 @@ The algorithm is straightforward.
 
 We determine if a node's left/right subtree is balanced and calculate the node's height in the same function.
 
-Thus the recursive function needs an additional parameter to record the height (by ref).
+Thus the recursive function needs **an additional parameter to record the height (by ref).**
 
 ### The Code
 
