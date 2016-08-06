@@ -13,22 +13,27 @@ For this problem, a height-balanced binary tree is defined as a binary tree in w
 
 The tree must meet two requirements to be a balaned one.
 
-1. The difference between each node's left and right subtree must NOT be greater than 1
+I. Each node's left and right subtree must be a balanced tree.  
 
-2. Each node's left and right subtree must be a balanced tree.  
-
-
+II. The difference between each node's left and right subtree must NOT be greater than 1
 
 
-###The Algorithm
+
+
+###The O(N) Algorithm
 
 Like other tree related algorithms, we use recursion to solve this problem. 
 
 The algorithm is straightforward. 
 
-We determine if a node's left/right subtree is balanced and calculate the node's height in the same function.
+In the recursion, we do three things.
 
-Thus the recursive function needs **an additional parameter to record the height (by ref).**
+1. Recursively call the function on the left/right child, use the boolean output to test **requirement I**. 
+2. From the recursive call, get the height of left/right subtree , use them to test **requirement II**.
+3. Before return, **update the height** of the current node.
+
+
+Thus the recursive function needs an additional parameter to record **the height (by ref)** of the node.
 
 ### The Code
 
