@@ -18,7 +18,7 @@
    * [2.11 Balanced Binary Tree](balanced_binary_tree.md)
    * [2.12 Minimum Depth of Binary Tree](minimum_depth_of_binary_tree.md)
    * [2.13 Add and Search Word - Data Structure Design](add_and_search_word_-_data_structure_design.md)
-   * Path Sum
+   * [Path Sum](path_sum.md)
 * [3. Linked List](linked_list.md)
    * [3.1 Add Two Numbers](add_two_numbers.md)
    * [3.2 Remove Linked List Elements](remove_linked_list_elements.md)
