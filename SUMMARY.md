@@ -19,7 +19,7 @@
    * [2.12 Minimum Depth of Binary Tree](minimum_depth_of_binary_tree.md)
    * [2.13 Add and Search Word - Data Structure Design](add_and_search_word_-_data_structure_design.md)
    * [2.14 Path Sum](path_sum.md)
-   * [Word Search II (Word Board)](word_search_ii_word_board.md)
+   * [2.15 Word Search II (Word Board)](word_search_ii_word_board.md)
 * [3. Linked List](linked_list.md)
    * [3.1 Add Two Numbers](add_two_numbers.md)
    * [3.2 Remove Linked List Elements](remove_linked_list_elements.md)
