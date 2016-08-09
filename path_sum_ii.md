@@ -33,5 +33,14 @@ Different from its preceding version, *2.14 Path Sum*, which is a simple tree tr
 
 **Refer to the summary of this chapter** for more details and pseduocode of backtracking. 
 
-###The Algorithm
+###The Pseduocode
 
+```
+findPath(root, sum, path, path collection)
+  if (!root) then return
+  add root into solution
+  if solution found, add path into path collection
+  findPath(root->left)
+  findPath(root->left)
+  remove root from solution 
+```
