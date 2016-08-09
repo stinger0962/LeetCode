@@ -33,7 +33,7 @@ Different from its preceding version, *2.14 Path Sum*, which is a simple tree tr
 
 **Refer to the summary of this chapter** for more details and pseduocode of backtracking. 
 
-###The Pseduocode
+###The Pseudocode
 
 ```
 findPath(root, sum, path, path collection)
@@ -43,4 +43,46 @@ findPath(root, sum, path, path collection)
   findPath(root->left)
   findPath(root->left)
   remove root from solution 
+```
+
+###The Code
+
+```
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    vector<vector<int>> pathSum(TreeNode* root, int sum) {
+        vector<int> path;
+        vector<vector<int>> paths;
+        if(!root){
+            return paths;
+        }
+        pathSumHelper(root, sum, path, paths);
+        return paths;
+    }
+private:
+    void pathSumHelper(TreeNode* root, int sum, vector<int>& path, vector<vector<int>>& paths){
+        if(!root){
+            return;
+        }
+        path.push_back(root->val); // Each node be a candidate of the solution
+        if(!root->left && !root->right && root->val == sum){ // If a path is found, record the path
+                paths.push_back(path);
+        }
+
+        pathSumHelper(root->left, sum - root->val, path, paths);
+        pathSumHelper(root->right, sum - root->val, path, paths);
+        path.pop_back(); // Remove node from candidate
+        return;
+    }
+
+};
 ```
