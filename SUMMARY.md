@@ -34,7 +34,7 @@
    * [6.4 ZigZag Conversion](zigzag_conversion.md)
    * [6.5 String to Integer (atoi)](string_to_integer_atoi.md)
    * [6.6 Regular Expression Match](6.5 regular_expression_match.md)
-   * [Integer to Roman](integer_to_roman.md)
+   * [6.7 Integer to Roman](integer_to_roman.md)
 * [7. Pure Math](pure_math.md)
    * [7.1 Count Primes](count_primes.md)
    * [7.2 Reverse Integer](reverse_integer.md)
