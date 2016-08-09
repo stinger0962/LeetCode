@@ -33,7 +33,7 @@
    * [6.3 Isomorphic Strings](isomorphic_strings.md)
    * [6.4 ZigZag Conversion](zigzag_conversion.md)
    * [6.5 String to Integer (atoi)](string_to_integer_atoi.md)
-   * [Regular Expression Match](6.5 regular_expression_match.md)
+   * [6.6 Regular Expression Match](6.5 regular_expression_match.md)
    * Integer to Roman
 * [7. Pure Math](pure_math.md)
    * [7.1 Count Primes](count_primes.md)
