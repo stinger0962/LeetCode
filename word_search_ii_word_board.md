@@ -43,7 +43,7 @@ procedure DST(cell)
   if accept(cell) then output(matching word)
   Valid Candidate(cell)
   cell ← visited
-  adj ← adjacent(cell)
+  adj ← adjacent(cell) // First extension
   while adj is within boundary do
     DST(adj)
   cell ← unvisited
