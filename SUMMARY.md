@@ -19,7 +19,6 @@
    * [2.12 Minimum Depth of Binary Tree](minimum_depth_of_binary_tree.md)
    * [2.13 Add and Search Word - Data Structure Design](add_and_search_word_-_data_structure_design.md)
    * [2.14 Path Sum](path_sum.md)
-   * [2.15 Word Search II (Word Board)](word_search_ii_word_board.md)
 * [3. Linked List](linked_list.md)
    * [3.1 Add Two Numbers](add_two_numbers.md)
    * [3.2 Remove Linked List Elements](remove_linked_list_elements.md)
@@ -48,5 +47,6 @@
    * [9.2 Minimum Size Subarray](92_minimum_size_subarray.md)
    * [9.3 Container With Most Water](container_with_most_water.md)
 * [10. Backtracking](backtracking.md)
+   * [2.15 Word Search II (Word Board)](word_search_ii_word_board.md)
    * [10.1 Path Sum II](path_sum_ii.md)
 
