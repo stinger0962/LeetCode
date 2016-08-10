@@ -21,11 +21,33 @@ You may assume that all inputs are consist of lowercase letters ```a-z```.
 
 
 ---
+###First Thing First. Search Word? Use Trie
 
 
-### Find All the Solutions with Backtracking
+In this problem, however, we don't need to implement the entire class of a trie. 
 
-This is a typical finding-all-the-solutions problem, and backtracking is really good to solve such a problem.
+**All we need is to define a Trie node.**
 
-We need to determine several conditions in the pseudocode of backtracking.
+We don't need to implement ```add(string word)``` , or ```search(string word)``` since our add and search will be based on a word list and a 2D board, respectively.
+
+
+### Find All the Solutions? Call Backtracking
+
+This is a typical finding-all-the-solutions problem. We use backtracking to solve such a problem.
+
+We need to determine several conditions in the following pseudocode of backtracking:
+
+```
+procedure bt(c)
+  if reject(P,c) then return
+  if accept(P,c) then output(P,c)
+  s ← first(P,c)
+  while s ≠ Λ do
+    bt(s)
+    s ← next(P,s)
+```
+Here, the reject condition has two meanings, either word NOT exist, or cell already visited.
+
+
+
 
