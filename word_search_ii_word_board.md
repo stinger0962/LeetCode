@@ -38,15 +38,17 @@ This is a typical finding-all-the-solutions problem. We use backtracking to solv
 We need to determine several conditions in the following pseudocode of backtracking:
 
 ```
-procedure bt(c)
-  if reject(P,c) then return
-  if accept(P,c) then output(P,c)
+procedure DST(cell)
+  if reject(P,cell) then return
+  if accept(P,cell) then output(P,c)
   s ← first(P,c)
   while s ≠ Λ do
-    bt(s)
+    DST(s)
     s ← next(P,s)
 ```
-Here, the reject condition has two meanings, either word NOT exist, or cell already visited.
+Here, the reject condition has two meanings, either a word does NOT exist, or a cell is already visited.
+
+To avoid using an extra mxn space, we temporarily change a cell's char into '#' after it has been visited, and switch it back to its original char after a DST is done.
 
 
 
