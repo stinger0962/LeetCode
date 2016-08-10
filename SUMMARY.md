@@ -47,6 +47,6 @@
    * [9.2 Minimum Size Subarray](92_minimum_size_subarray.md)
    * [9.3 Container With Most Water](container_with_most_water.md)
 * [10. Backtracking](backtracking.md)
-   * [10.2 Word Search II (Word Board)](word_search_ii_word_board.md)
    * [10.1 Path Sum II](path_sum_ii.md)
+   * [10.2 Word Search II (Word Board)](word_search_ii_word_board.md)
 
