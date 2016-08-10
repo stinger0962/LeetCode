@@ -25,7 +25,7 @@ You may assume that all inputs are consist of lowercase letters ```a-z```.
 
 ### Find All the Solutions with Backtracking
 
-This is a typical finding-all-the-solutions problem, and backtracking is designed to solve such a problem.
+This is a typical finding-all-the-solutions problem, and backtracking is really good to solve such a problem.
 
 We need to determine several conditions in the pseudocode of backtracking.
 
