@@ -35,20 +35,31 @@ We don't need to implement ```add(string word)``` , or ```search(string word)```
 
 This is a typical finding-all-the-solutions problem. We use backtracking to solve such a problem.
 
-We need to determine several conditions in the following pseudocode of backtracking:
+Below is the pseudocode of backtracking with detailed explanation:
 
 ```
 procedure DST(cell)
-  if reject(P,cell) then return
-  if accept(P,cell) then output(P,c)
-  s ← first(P,c)
-  while s ≠ Λ do
-    DST(s)
-    s ← next(P,s)
+  if reject(cell) then return
+  if accept(cell) then output(matching word)
+  Valid Candidate(cell)
+  cell ← visited
+  adj ← adjacent(cell)
+  while adj is within boundary do
+    DST(adj)
+  cell ← unvisited
+  Invalid Candidate(cell)
 ```
-Here, the reject condition has two meanings, either a word does NOT exist, or a cell is already visited.
+The **reject** condition has two meanings, either a word does NOT exist, or a cell is already visited.
 
-To avoid using an extra mxn space, we temporarily change a cell's char into '#' after it has been visited, and switch it back to its original char after a DST is done.
+The **accept** condition means that we encounter a leaf node in the trie.
+
+To avoid using an extra mxn space, we temporarily change a cell's char into **'#'** after it has been **visited**, and switch it back to its original char after a DST is done.
+
+**Valid and invalid candidate** means adding and removing a char at the end of a candidate string.
+
+
+
+
 
 
 
