@@ -49,6 +49,6 @@
 * [10. Backtracking](backtracking.md)
    * [10.1 Path Sum II](path_sum_ii.md)
    * [10.2 Word Search II (Word Board)](word_search_ii_word_board.md)
-* [Dynamic Programming](dynamic_programming.md)
+* [11. Dynamic Programming](dynamic_programming.md)
    * [House Robber](house_robber.md)
 
