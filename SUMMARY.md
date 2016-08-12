@@ -51,5 +51,5 @@
    * [10.2 Word Search II (Word Board)](word_search_ii_word_board.md)
 * [11. Dynamic Programming](dynamic_programming.md)
    * [11.1 House Robber](house_robber.md)
-   * House Robber II(Cycle)
+   * [House Robber II(Cycle)](house_robber_iicycle.md)
 
