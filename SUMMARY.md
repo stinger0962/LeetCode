@@ -36,6 +36,7 @@
    * [6.6 Regular Expression Match](6.5 regular_expression_match.md)
    * [6.7 Integer to Roman](integer_to_roman.md)
    * [Roman to Integer](roman_to_integer.md)
+   * Longest Common Prefix
 * [7. Pure Math](pure_math.md)
    * [7.1 Count Primes](count_primes.md)
    * [7.2 Reverse Integer](reverse_integer.md)
