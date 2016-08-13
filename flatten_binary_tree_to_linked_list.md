@@ -62,4 +62,6 @@ Let's have a look at both recursive and iterative solutions.
 
 ###Recursion
 
+Recursion is NOT easy to understand.
+
 
