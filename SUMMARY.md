@@ -58,5 +58,5 @@
 * [11. Dynamic Programming](dynamic_programming.md)
    * [11.1 House Robber](house_robber.md)
    * [11.2 House Robber II(Cycle)](house_robber_iicycle.md)
-   * [Regular Expression Matching](regular_expression_matching.md)
+   * [11.3 Regular Expression Matching](regular_expression_matching.md)
 
