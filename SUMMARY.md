@@ -38,6 +38,7 @@
    * [6.7 Integer to Roman](integer_to_roman.md)
    * [6.8 Roman to Integer](roman_to_integer.md)
    * [6.9 Longest Common Prefix](longest_common_prefix.md)
+   * Distinct Subsequences
 * [7. Pure Math](pure_math.md)
    * [7.1 Count Primes](count_primes.md)
    * [7.2 Reverse Integer](reverse_integer.md)
