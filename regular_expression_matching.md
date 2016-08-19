@@ -52,6 +52,17 @@ There are two conditions regarding the last element of P.
 1. P doesn't end with ```'*'```, M[i][j] is true if M[i-1][j-1] is true and the S[i-1] == P[j-1]
 
 
-2. P ends with '*' 
+2. P ends with ```'*'``` . There are further two conditions.
+
+  (1) ```'*'``` means the preceding character appears zero times. In this case, M[i][j] is true if M[i][j-2] is true.
+  
+  (2) The preceding character appears at least once. A critical observation is that in this case ```"X*"``` equals to ```'X*X'```. 
+  
+  In other words, M[i][j] == M[i][j+1], where P doesn't end with ```'*'```. This brings us back to condition 1. M[i][j+1] is true if M[i-1][j] is true.
+  
+  Besides, we have another constraint. S's last char matches the char before ```'*'```. We denote as s[i-1] == P[j-2]. 
+
+ 
+ ### The Starting Conditions
 
 
