@@ -38,7 +38,6 @@
    * [6.7 Integer to Roman](integer_to_roman.md)
    * [6.8 Roman to Integer](roman_to_integer.md)
    * [6.9 Longest Common Prefix](longest_common_prefix.md)
-   * [6.10 Distinct Subsequences](distinct_subsequences.md)
 * [7. Pure Math](pure_math.md)
    * [7.1 Count Primes](count_primes.md)
    * [7.2 Reverse Integer](reverse_integer.md)
@@ -58,5 +57,6 @@
 * [11. Dynamic Programming](dynamic_programming.md)
    * [11.1 House Robber](house_robber.md)
    * [11.2 House Robber II(Cycle)](house_robber_iicycle.md)
+   * [6.10 Distinct Subsequences](distinct_subsequences.md)
    * [11.3 Regular Expression Matching](regular_expression_matching.md)
 
