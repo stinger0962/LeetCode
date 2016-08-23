@@ -37,3 +37,33 @@ We notice that all numbers, including the target are **positive** numbers. Such 
 ###Avoid duplicate solution
 
 To avoid duplicate solutions, we need to introduce an additional parameter which records the starting position of each loop. The starting index **ONLY** moves forward.
+
+
+###The Code
+
+```
+class Solution {
+public:
+    vector<vector<int>> combinationSum(vector<int>& candidates, int target) {
+        vector<vector<int>> solution;
+        vector<int> route;
+        combinationSumBacktrack(solution, route, candidates, target, 0);
+        return solution;
+    }
+private:
+    void combinationSumBacktrack(vector<vector<int>>& solution, vector<int>& route, vector<int>& nums, int target, int start){
+        if(target < 0){
+            return;
+        }
+        if(target == 0){
+            solution.push_back(route);
+            return;
+        }
+        for(int i = start; i < nums.size(); i++){
+            route.push_back(nums[i]);
+            combinationSumBacktrack(solution, route, nums, target - nums[i], i);
+            route.pop_back();
+        }
+    }
+};
+```
