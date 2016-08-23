@@ -11,6 +11,7 @@
 ###Pseudocode
 
 ```
+denotions
 P : the data that the problem can be solved
 c: candidate
 first(P,c): first extension of c
