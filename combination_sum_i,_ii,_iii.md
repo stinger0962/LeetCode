@@ -133,3 +133,75 @@ private:
     }
 };
 ```
+
+
+## Combination Sum III
+
+Find all possible combinations of k numbers that add up to a number n, given that only numbers from **1 to 9** can be used and each combination should be **a unique set of numbers**.
+
+
+Example 1:
+
+Input: k = 3, n = 7
+
+Output:
+
+```
+[[1,2,4]]
+```
+
+Example 2:
+
+Input: k = 3, n = 9
+
+Output:
+
+```
+[[1,2,6], [1,3,5], [2,3,4]]
+```
+
+### The difference
+
+1. We must use exact k numbers to construct the sum. 
+2. The candidates come from a fixed unique number set: 1,2,...,9.
+
+We make appropriate changes, respectively.
+1. Omit a parameter which indicates the number set, add a new one denoting the number of candidates.
+2. Introduce a new ending condition where the number of candidates is used up.
+
+
+###The Code
+
+```
+class Solution {
+public:
+    vector<vector<int>> combinationSum3(int k, int n) {
+        vector<vector<int>> solution;
+        vector<int> route;
+        combinationSumBacktrack(solution, route, k, n, 1);
+        return solution;
+    }
+private:
+    // k: how many numbers still needed
+    // target: the target sum
+    // start: the starting number to begin a loop. It is between 1 to 9
+    void combinationSumBacktrack(vector<vector<int>>& solution, vector<int>& route, int k, int target, int start){
+        // Notice that order of the following two if statements matters
+        if(target == 0 && k == 0){
+            solution.push_back(route);
+            return;
+        }
+        if(target < 0 || k == 0){
+            return;
+        }
+        for(int i = start; i < 10 ; i++){
+            route.push_back(i);
+            combinationSumBacktrack(solution, route, k - 1, target - i, i + 1);
+            route.pop_back();
+        }
+    }
+};
+```
+
+
+
