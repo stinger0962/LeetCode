@@ -1,5 +1,7 @@
 # Subsets I, II
 
+## Subset I
+
 Given a set of distinct integers, nums, return all possible subsets.
 
 Note: The solution set must not contain duplicate subsets.
@@ -56,3 +58,60 @@ private:
 };
 ```
 
+
+## Subset II
+
+Given a collection of integers that might contain **duplicates**, nums, return all possible subsets.
+
+Note: The solution set must not contain duplicate subsets.
+
+For example,
+If **nums** = ```[1,2,2]```, a solution is:
+
+```
+[
+  [2],
+  [1],
+  [1,2,2],
+  [2,2],
+  [1,2],
+  []
+]```
+
+
+
+---
+
+### Skip Duplicates
+
+The process is same as that of Combination Sum II.
+
+###The Code
+
+```
+class Solution {
+public:
+    vector<vector<int>> subsetsWithDup(vector<int>& nums) {
+        sort(nums.begin(), nums.end());
+        vector<vector<int>> solution;
+        vector<int> subset;
+        subsetsWithDupBacktrack(solution, subset, nums, 0);
+        return solution;
+    }
+private:
+    void subsetsWithDupBacktrack(vector<vector<int>>& solution, vector<int>& subset, vector<int>& nums, int start){
+            // There are no if statements here.
+            solution.push_back(subset);
+            for(int i = start; i < nums.size(); i++){
+                if(i == start || nums[i] != nums[i-1]){
+                    subset.push_back(nums[i]);
+                    subsetsWithDupBacktrack(solution, subset, nums, i+1);
+                    subset.pop_back();
+                }
+                
+            }
+         }
+};
+
+
+```
