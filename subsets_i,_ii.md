@@ -22,5 +22,37 @@ If nums = [1,2,3], a solution is:
 ---
 
 
+###Same Structure as Combination Sum 
 
+This problem has a similar structure as the *combination sum series*. Difference is that there is no need to filter candidates, all fo which are valid solutions.
+
+Such difference brings two changes in the backtracking function.
+
+1. There is no early return.
+2. There is no validation.
+
+
+###The Code
+
+```
+class Solution {
+public:
+    vector<vector<int>> subsets(vector<int>& nums) {
+        vector<vector<int>> solution;
+        vector<int> subset;
+        subsetsBacktrack(solution, subset, nums, 0);
+        return solution;
+    }
+private:
+    void subsetsBacktrack(vector<vector<int>>& solution, vector<int>& subset, vector<int>& nums, int start){
+            // There are no if statements here.
+              solution.push_back(subset);
+              for(int i = start; i < nums.size(); i++){
+                  subset.push_back(nums[i]);
+                  subsetsBacktrack(solution, subset, nums, i+1);
+                  subset.pop_back();
+              }
+          }
+};
+```
 
