@@ -41,7 +41,7 @@ findPath(root, sum, path, path collection)
   add root into solution
   if solution found, add path into path collection
   findPath(root->left)
-  findPath(root->left)
+  findPath(root->right)
   remove root from solution 
 ```
 
