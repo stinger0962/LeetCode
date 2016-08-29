@@ -52,6 +52,15 @@ Recursion will also need a parameter to indicate the starting index, 1 in the ab
 when the recursion returns, we swap A1, A2 back.```
 
 
+*Base case*
+
+In the outmost loop, we have N swaps, then N-1 swaps, N-2, until 1. 
+
+The base case is when we reach the inner most loop, and all elements have been swapped (except the last one, which will swap with itself).
+
+There are N! different ways to reach the inner most loop, which is also the run time complexity.
+
+###The Code
 
 ```
 class Solution {
