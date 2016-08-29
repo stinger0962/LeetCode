@@ -21,3 +21,59 @@ For example,
 ---
 
 
+###Algorithm for Generating All Permutation
+
+There is a decent online tutorial about this topic.
+
+[http://forum.codecall.net/topic/64715-how-to-generate-all-permutations/](http://forum.codecall.net/topic/64715-how-to-generate-all-permutations/)
+
+
+The basic idea is to think of permuting A1, A2, ... An as
+
+```
+A1 + permute(A2, ...An), where A1 is at position 0
+A2 + permute(A1, A3, ...An), where A2 is at position 0
+...
+An + permute(A1, A2, ... A(n-1) ), where An is at position 0```
+
+Then we can recursively call the function on the array of n-1 elements. 
+
+Yet, we still have a problem to solve. The n-1 element array is dynamic.
+
+To tackle the problem elegantly, we swap two elements each time we enter the loop, and swap them back when after the recursion returns.
+
+```
+For example. 
+In the entry of A2 + permute(A1, A3, ...An) 
+we first swap A1 and A2, 
+then call the recursion on updated array(A2,A1,...An) 
+                ^
+Recursion will also need a parameter to indicate the starting index, 1 in the above case
+when the recursion returns, we swap A1, A2 back.```
+
+
+
+```
+class Solution {
+public:
+    vector<vector<int>> permute(vector<int>& nums) {
+        vector<vector<int>> solution;
+        permuteBacktrack(solution, nums, 0);
+        return solution;
+    }
+    
+private:
+    // By swaping two elements, we omit the use of an extra vector to store the numbers
+    void permuteBacktrack(vector<vector<int>>& solution, vector<int>& nums, int start){
+        if(start == nums.size() - 1 ){
+            solution.push_back(nums);
+        }
+        for(int i = start; i < nums.size(); i++){
+            
+            swap(nums[i], nums[start]);
+            permuteBacktrack(solution, nums, start+1);
+            swap(nums[i], nums[start]);
+        }
+    }
+};
+```
