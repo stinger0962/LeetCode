@@ -21,6 +21,8 @@ For example,
 ---
 
 
+
+
 ###Algorithm for Generating All Permutation
 
 There is a decent online tutorial about this topic.
@@ -28,7 +30,7 @@ There is a decent online tutorial about this topic.
 [http://forum.codecall.net/topic/64715-how-to-generate-all-permutations/](http://forum.codecall.net/topic/64715-how-to-generate-all-permutations/)
 
 
-The basic idea is to think of permuting A1, A2, ... An as
+The basic idea is to think of permuting (A1, A2, ... An) as the combination of
 
 ```
 A1 + permute(A2, ...An), where A1 is at position 0
@@ -38,9 +40,9 @@ An + permute(A1, A2, ... A(n-1) ), where An is at position 0```
 
 Then we can recursively call the function on the array of n-1 elements. 
 
-Yet, we still have a problem to solve. The n-1 element array is dynamic.
+Yet, we still face a problem that the n-1 element array is dynamic.
 
-To tackle the problem elegantly, we swap two elements each time we enter the loop, and swap them back when after the recursion returns.
+To tackle the problem elegantly, we swap two elements each time we enter the loop, and swap them back  after the recursion returns.
 
 ```
 For example. 
@@ -54,11 +56,11 @@ when the recursion returns, we swap A1, A2 back.```
 
 *Base case*
 
-In the outmost loop, we have N swaps, then N-1 swaps, N-2, until 1. 
+Starting from outmost loop, we have N swaps, then N-1 swaps, then N-2, until 1 last swap in the inner most loop. 
 
-The base case is when we reach the inner most loop, and all elements have been swapped (except the last one, which will swap with itself).
+The base case is when we reach the inner most loop, at which time all elements have been swapped (except the last one, which will swap with itself, so it can be skipped).
 
-There are N! different ways to reach the inner most loop, which is also the run time complexity.
+There are N! different ways to reach the inner most loop, thus the run time complexity is N!.
 
 ###The Code
 
