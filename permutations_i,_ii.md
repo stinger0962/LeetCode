@@ -21,6 +21,9 @@ For example,
 ---
 
 
+> This is a backtracking problem without early returning conditions.
+
+
 
 
 ###Algorithm for Generating All Permutation
@@ -88,3 +91,31 @@ private:
     }
 };
 ```
+
+
+## Permutations II
+
+Given a collection of numbers that might contain duplicates, return all possible unique permutations.
+
+For example,
+```[1,1,2]``` have the following unique permutations:
+```
+[
+  [1,1,2],
+  [1,2,1],
+  [2,1,1]
+]```
+
+
+
+---
+
+###Not a Backtracking One
+
+So far, we have dealt with duplicate in a single way. Sort the array first, then skip duplicate numbers in the loop. 
+
+However, if we proceed this problem using the same approach, we will encounter a serious BUG. Due to swapping elements and passing by reference, the array will **NOT** keep sorted all the way along recursion.
+
+By adding a trick which passes the array by value and doesn't swap back, we can still find a solution using swap. However, passing by value is not space efficient. So let's try a different appraoch.
+
+###Next Permutation
