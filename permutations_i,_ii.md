@@ -116,6 +116,80 @@ So far, we have dealt with duplicate in a single way. Sort the array first, then
 
 However, if we proceed this problem using the same approach, we will encounter a serious BUG. Due to swapping elements and passing by reference, the array will **NOT** keep sorted all the way along recursion.
 
-By adding a trick which passes the array by value and doesn't swap back, we can still find a solution using swap. However, passing by value is not space efficient. So let's try a different appraoch.
+We can still find an available solution by introducing a trick that passes the array **by value** and **does not swap numbers back**. 
 
-###Next Permutation
+By passing the array by value, the swapped numbers only persist in a single route from outmost to inner most loop. The swap doesn't effect parallel recursion calls. (This part is hard to understand!)
+
+```
+class Solution {
+public:
+    vector<vector<int>> permuteUnique(vector<int>& nums) {
+        vector<vector<int>> solution;
+        sort(nums.begin(), nums.end());
+        permuteBacktrack(solution, nums, 0);
+        return solution;
+    }
+private:
+    void permuteBacktrack(vector<vector<int>>& solution, vector<int> nums, int start){
+        if(start == nums.size()-1){
+            solution.push_back(nums);
+        }
+        for(int i = start; i < nums.size(); i++){
+            if(i != start && nums[i] == nums[start] ){
+                continue;
+            }
+            swap(nums[i], nums[start]);
+            permuteBacktrack(solution, nums, start+1);
+            
+        }
+    }
+};
+```
+However, passing by value is not straightforward or easy to understand. We will also try a different appraoch.
+
+###Easy to Understand Depth-First-Search Solution
+
+The idea is to use an extra array of boolean value to store whether a number is already added into the set or not.
+
+**Pros** is that this solution is straightforward and easy to follow. Plus, this solution is also suitable to solve permutation without repetitions. 
+
+**Cons** is that it does use extra space to store boolean values for each loop.
+
+
+```
+class Solution {
+public:
+    vector<vector<int>> permuteUnique(vector<int>& nums) {
+        vector<vector<int>> solution;
+        vector<int> route;
+        vector<bool> used(nums.size(), false);
+        sort(nums.begin(), nums.end());
+        permuteBacktrack(solution, route, nums, used);
+        return solution;
+    }
+private:
+    void permuteBacktrack(vector<vector<int>>& solution, vector<int>& route, vector<int>& nums, vector<bool> used){
+        if(route.size() == nums.size()){
+            solution.push_back(route);
+            return;
+        }
+        for(int i = 0; i < nums.size(); i++){
+            if(used[i]){
+                continue;
+            }
+            // We skip a number if it is duplicate with its previous, 
+            // and the previous one is not used yet
+            // Omit this condition, it's also a solution for permutation w/o duplicate
+            if(i != 0 && nums[i] == nums[i-1] && used[i-1] == false){
+                continue;
+            }
+            used[i] = true;
+            route.push_back(nums[i]);
+            permuteBacktrack(solution, route, nums, used);
+            used[i] = false;
+            route.pop_back();
+        }
+    }
+};
+```
+
