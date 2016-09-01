@@ -7,7 +7,7 @@
    * [1.3 Kth Largest Element in an Array](kth_largest_element_in_an_array.md)
    * [1.4 Next Permutation](next_permutation.md)
    * [1.5 Permutation Sequence](permutation_sequence.md)
-   * [Letter Combinations of a Phone Number](letter_combinations_of_a_phone_number.md)
+   * [1.6 Letter Combinations of a Phone Number](letter_combinations_of_a_phone_number.md)
 * [2. Tree](tree.md)
    * [2.1 Symmetric Tree](21_symmetric_tree.md)
    * [2.2 Binary Tree Level Order Traversal](binary_tree_level_order_traversal.md)
