@@ -108,7 +108,7 @@ Recall that the function of a queue in BFT is to gather all nodes at the same le
 
 Here we already have a next pointer to link nodes in the same level together. Taking advantage of next pointer, we can implement BFT without queue.
 
-###A Clumsy Implementation Only Traversaling Current Level
+###A Clumsy Implementation Only Traversaling One Level a Time
 
 In the intuitive solution, we use a pointer to traversal the tree by level, and an additional pointer pointing to the head of each next level.
 
