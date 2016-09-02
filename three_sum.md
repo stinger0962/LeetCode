@@ -60,32 +60,24 @@ public:
                 int sum = nums[i] + nums[left] + nums[right];
                 if(sum == 0){
                     result.push_back(vector<int>{nums[i], nums[left], nums[right]}); // Solution found
-                    // Avoid duplicate numbers from both sides
-                    // Reason: if duplicate exists, then two of three numbers are the same as that of the previous solution,
-                    // which implies a duplicate solution
-                    while(left + 1 < right && nums[left] == nums[left+1]){
-                        ++left;
-                    }
-                    while(right - 1 > left && nums[right] == nums[right-1]){
-                        --right;
-                    }
-                    // Double pointers move towards each other
-                    ++left;
-                    --right;
+                    // DP will move towards each other at least once
+                    // Pointers will move multiple times if next number is found duplicate
+                    do{
+                      left++;
+                    }while(left < right && nums[left] == nums[left-1]);
+                    do{
+                      right--;
+                    }while(left < right && nums[right] == nums[right+1]);
                 }
-                // If sum < 0, then the left is too "negative", we must move it right
-                else if(sum < 0){
-                    // Avoid duplicate, reason is pretty much the same as above ( 2 of 3 numbers are same)
-                    while(left + 1 < right && nums[left] == nums[left+1]){
-                        ++left;
-                    }
-                    ++left;
+                else if(sum < 0){ // If sum is too small, move left forward
+                    do{
+                      left++;
+                    }while(left < right && nums[left] == nums[left-1]);
                 }
-                else{
-                    while(right - 1 > left && nums[right] == nums[right-1]){
-                        --right;
-                    }
-                    --right;
+                else{ // If sum is too big, move right backward
+                    do{
+                      right--;
+                    }while(left < right && nums[right] == nums[right+1]);
                 }
             }
         }
