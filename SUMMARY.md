@@ -30,6 +30,7 @@
    * [3.1 Add Two Numbers](add_two_numbers.md)
    * [3.2 Remove Linked List Elements](remove_linked_list_elements.md)
    * [3.3 Reverse Linked List](reverse_linked_list.md)
+   * Remove Nth Node From End of List
 * [4. Hash Table](hash_table.md)
    * [4.1 Happy Number](happy_number.md)
 * [5. Bitwise Operator](bitwise_operator.md)
