@@ -9,7 +9,7 @@
    * [1.5 Permutation Sequence](permutation_sequence.md)
    * [1.6 Letter Combinations of a Phone Number](letter_combinations_of_a_phone_number.md)
    * [1.7 Contains Duplicate](contains_duplicate.md)
-   * [Pascal's Triangle](pascals_triangle.md)
+   * [1.8 Pascal's Triangle I, II](pascals_triangle.md)
 * [2. Tree](tree.md)
    * [2.1 Symmetric Tree](21_symmetric_tree.md)
    * [2.2 Binary Tree Level Order Traversal](binary_tree_level_order_traversal.md)
