@@ -58,7 +58,7 @@
    * [9.4 Three Sum](three_sum.md)
    * [9.5 Three Sum Closest](three_sum_closest.md)
    * [9.6 Four Sum](four_sum.md)
-* [Remove Nth Node From End of List](remove_nth_node_from_end_of_list.md)
+* [9.7 Remove Nth Node From End of List](remove_nth_node_from_end_of_list.md)
 * [10. Backtracking](backtracking.md)
    * [10.1 Path Sum II](path_sum_ii.md)
    * [10.2 Word Search II (Word Board)](word_search_ii_word_board.md)
