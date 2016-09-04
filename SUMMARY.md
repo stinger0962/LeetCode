@@ -71,6 +71,6 @@
    * [11.2 House Robber II(Cycle)](house_robber_iicycle.md)
    * [11.3 Regular Expression Matching](regular_expression_matching.md)
    * [11.4 Distinct Subsequences](distinct_subsequences.md)
-* [Heap](heap.md)
+* [12. Heap](heap.md)
    * The Skyline Problem
 
