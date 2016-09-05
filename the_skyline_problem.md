@@ -18,7 +18,7 @@ The output is a list of "**key points**" (red dots in Figure B) in the format of
 
 **A key point is the left endpoint of a horizontal line segment**. Note that the last key point, where the rightmost building ends, is merely used to mark the termination of the skyline, and always has zero height. Also, the ground in between any two adjacent buildings should be considered part of the skyline contour.
 
-**Output**: For instance, the skyline in Figure B should be represented as:```[ [2 10], [3 15], [7 12], [12 0], [15 10], [20 8], [24, 0] ]```.
+**Output**: For instance, the skyline in Figure B should be represented as:```[ [2 10], [3 15], [7 12], [12 0], [15 10], [20 8], [24, 0] ]```. (**All left point of horizonal line, as well as the right most point**)
 
 **Notes**:
 
@@ -37,6 +37,25 @@ For instance, ```[...[2 3], [4 5], [7 5], [11 5], [12 7]...]``` is not acceptabl
 
 
 ---
+
+
+### Analysis of the Requirement
+
+Fisrt, this is a complicted, integrated problem. It doesn't ask a single aspect of programming, but a combination of a set of knowledge. 
+
+Let's first tackle down the long text into simple question. What does this problem really ask for?
+
+In short, we are looking for a collection of critical points which are vectice of buildings.
+
+Let's transform the context into the following pseudocode.
+
+```
+for each critical point C 
+    C.height = height of the tallest building over C 
+    not including the building's right edge
+```
+
+### $$NLogN$$ Algorithm
 
 
 
