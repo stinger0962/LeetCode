@@ -50,14 +50,27 @@ In short, we are looking for a collection of critical points which are vectice o
 Let's transform the context into the following pseudocode.
 
 ```
-for each critical point C 
-    C.height = height of the tallest building over C 
+for each critical point C (time N)
+    C.height = height of the tallest building over C  (time LogN)
     not including the building's right edge
 ```
 
 ### $$NLogN$$ Algorithm
 
+Straightforwardly, finding tallest building requires some structure like **heap**. 
 
+Main steps are as followings, see comments for treatments of special conditions. 
+
+```
+1. Sort CP(critical points) by their x coordinates, categorize them into two groups, left and right.
+
+2. Scan CP from left to right.
+
+3. When encountering left vertex, add the building into heap, CP's height = tallest in heap
+
+4. When encountering right vertex, remove the building from heap, CP's height = tallest in heap
+
+```
 
 
 
