@@ -39,9 +39,11 @@ For instance, ```[...[2 3], [4 5], [7 5], [11 5], [12 7]...]``` is not acceptabl
 ---
 
 
+
+
 ### Analysis of the Requirement
 
-Fisrt, this is a complicted, integrated problem. It doesn't ask a single aspect of programming, but a combination of a set of knowledge. 
+Fisrt, this is a complicated, integrated problem. It doesn't ask a single aspect of programming, but a combination of a set of knowledge. 
 
 Let's first tackle down the long text into simple question. What does this problem really ask for?
 
