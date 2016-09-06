@@ -72,5 +72,95 @@ Main steps are as followings, see comments for treatments of special conditions.
 
 ```
 
+###Custom Sort
+
+We will store CP's info in a pair value. First is its X, and second is its height.
+
+Height of a left vertex is **positive**, while that of a right vertex is **negative**.
+
+We will want to sort our pairs by their x values, ascendingly. 
+
+If two points share same x, we sort them by their height, descendingly. That is, left vertex comes before right points. (We come up to this sort from debugging.)
+
+###Appropriate Data Structure
+
+Ideally, we want to use STL's PQ(priority queue) to implement heap. However, PQ doesn't support looking up, which we will want to use to remove a certain building from the heap. 
+
+Alternatively, we will use a **multiset** to mimic the behavior of a heap.
+
+```multiset.rbegin()``` will return a pointer (which we can dereference to get the value) to the largest member in the set.
+
+```multiset.erase(multiset.find("key"))``` will remove a single entry with the key value.
 
 
+
+###The Code
+
+```
+class Solution {
+public:
+    // We need a collection of critical points C
+    // For each critical point C, set C.Y to the tallest rectangle over c(right edge excluded)
+    // Omit duplicate height when necessary
+    vector<pair<int, int>> getSkyline(vector<vector<int>>& buildings) {
+        // Main steps:
+        // 1. Sort the CP, group them as left and right edge
+        // 2. Scan CP from left to right. There are two conditions.
+        // 3. When encounting left edge, add rectangle to the heap, height being key
+        //      then set CP.Y to the tallest height in heap
+        // 4. When encounting right edge, remove rectangle from the heap 
+        //      then set CP.Y to the tallest height in heap
+        
+        vector<pair<int, int>> result;
+        vector<pair<int, int>> cps; // Collection of categorized and sorted critical points
+        for(const auto& rec: buildings){
+            cps.push_back(make_pair(rec[0], rec[2])); // Left vertex has possible y value
+            cps.push_back(make_pair(rec[1], -rec[2])); // Right vertex has negative y value
+        }
+        
+        
+        
+        sort(cps.begin(), cps.end(), sortCP);
+        // **** Design Change -- Use Multiset instead of Priority Queue
+        // If we use priority queue to store height of active rectangles
+        // We will not ba able to delete a specific height associated with right vertex
+        // The reason behind is that priority queue doesn't support such action.
+
+        // By default, elements in Multiset are sorted ascendingly,
+        // which allow us access the last element to retrieve the tallest height currently active
+        multiset<int> activeHeight; // The collection of height of all active rectangles
+        
+        
+        for(const auto& cp : cps){
+            if(cp.second > 0){ // Left vertex
+                activeHeight.insert(cp.second);
+            }
+            else{ // Right vertex
+                // Be aware NOT to erase multiple heights with same value!
+                // multiset.find() points to a single element
+                activeHeight.erase(activeHeight.find(-cp.second)); 
+            }
+            int xCoord = cp.first;
+            // Height is zero if there is no avtive building 
+            int height = activeHeight.empty() ? 0 : *activeHeight.rbegin();
+            // To avoid consecutive same height, we compare this value to the last element in the result
+            if(result.empty() || (result.rbegin()->second != height && result.rbegin()->first != xCoord) ){
+                result.push_back(make_pair(xCoord, height));
+            }
+        }
+        return result; 
+    }
+    
+private:
+        // Sort critical points by x-coordinate ascendingly
+        // For points having same x-coordinate, left and higher vertex comes first
+        bool static sortCP(pair<int, int> a, pair<int, int> b){
+            if(a.first == b.first){
+                return a.second > b.second;
+            }
+            else{
+                return a.first < b.first;
+            }
+        }
+};
+```
