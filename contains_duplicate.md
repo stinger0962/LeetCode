@@ -60,6 +60,8 @@ If there are not enough numbers, then the set is the entire subset left to the e
 Duplicate is found if the element is contained in the set.
 
 
+###The Code
+
 
 ```
 class Solution {
