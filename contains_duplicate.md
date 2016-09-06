@@ -94,6 +94,48 @@ public:
 
 #Contains Duplicate III
 
-Given an array of integers, find out whether there are two distinct indices i and j in the array such that the difference between nums[i] and nums[j] is at most t and the difference between i and j is at most k.
+Given an array of integers, find out **whether there are** two distinct indices i and j in the array such that the difference between nums[i] and nums[j] is at most t and the difference between i and j is at most k.
 
 
+**Warning**: we are going to determine the existence of such i and j pair. That is, just one case is enough.
+
+
+###The Algorithm
+
+The idea is similar to that of II. We keep track of a dynamic window slide of each element nums[i], which contains k numbers left to it (or all if there are not enough numbers.
+
+Our goal is then to determine if there exists a X in the slide such that 
+
+```nums[i] - t <= X <= nums[i] + t```
+
+
+We will see the other details in the comments.
+
+###The Code
+
+```
+class Solution {
+public:
+    bool containsNearbyAlmostDuplicate(vector<int>& nums, int k, int t) {
+        if(k <= 0 || t < 0){
+            return false;
+        }
+        set<int> subset;
+        for(int i = 0; i < nums.size(); i++){
+            if(i > k){
+                subset.erase(nums[i-k-1]);
+            }
+            // In the left slide of nums[i], we want ot find an element X such that 
+            // nums[i] -t <= X <= nums[i] + t
+            // We look for the first index that nums[i] -t <= X, 
+            // and if such X <= nums[i] + t, we are done.
+            auto pos = subset.lower_bound(nums[i] - t); // 
+            if(pos != subset.end() && *pos - nums[i] <= t){
+                return true;
+            }
+            subset.insert(nums[i]);
+        }
+        return false;
+    }
+};
+```
