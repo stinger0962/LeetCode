@@ -67,7 +67,7 @@
    * [10.3 Combination Sum I, II, III](combination_sum_i,_ii,_iii.md)
    * [10.4 Subsets I, II](subsets_i,_ii.md)
    * [10.5 Permutations I, II](permutations_i,_ii.md)
-   * Generate Parentheses
+   * [Generate Parentheses](generate_parentheses.md)
 * [11. Dynamic Programming](dynamic_programming.md)
    * [11.1 House Robber](house_robber.md)
    * [11.2 House Robber II(Cycle)](house_robber_iicycle.md)
