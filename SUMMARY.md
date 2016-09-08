@@ -68,7 +68,7 @@
    * [10.4 Subsets I, II](subsets_i,_ii.md)
    * [10.5 Permutations I, II](permutations_i,_ii.md)
    * [10.6 Generate Parentheses](generate_parentheses.md)
-   * [Remove Invalid Parentheses](remove_invalid_parentheses.md)
+   * [10.7 Remove Invalid Parentheses](remove_invalid_parentheses.md)
 * [11. Dynamic Programming](dynamic_programming.md)
    * [11.1 House Robber](house_robber.md)
    * [11.2 House Robber II(Cycle)](house_robber_iicycle.md)
