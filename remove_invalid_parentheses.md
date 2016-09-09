@@ -15,15 +15,61 @@ Examples:
 
 ###Finding All Solutions, Use Backtracking
 
+When we read about "all possible results", we know this is another backtracking problem.
 
+We can think of removing invalid parentheses as constructing a new string from the given one, while skipping unneeded parentheses.
+
+However, the ending condition and the body structure of backtracking is a little different, which makes this problem marked as hard.
 
 
 ###Setting up Ending Condition
+Since we are to move minimum invalid parentheses, we are only to move either left, or right parenthesis. We will NOT remove both left and right in any condition. 
 
+If we traversal the string while pairing valid parentheses, we will find out which one, and the number to remove. This counts for **the first ending condition**.
+
+
+
+---
+
+
+
+Furthermore, we want to avoid invalid sequences of parentheses. For example, ```"())" ```
+
+To add this validation, we will introduce a new parameter "open". 
+
+When we encounter a left parenthsis, "open" increments by 1; when we encounter a right one, it decrement by 1.
+
+In a valid string, "open" is either positive or zero. 
+
+When "open" is negative, we know there are too many ```')'```. This makes **the 2nd ending condition**.
 
 
 ###Variation of Backtracking Structure
 
+Recall that a general body of backtrack includes 3 steps:
+
+```
+add this candidate to solution
+Recur(next candidate) 
+remove this candidate from solution
+```
+
+In previous problems, it looks like:
+
+```
+path.push_back(element)
+recur(next element, new para list)
+path.pop_back()
+```
+
+In this problem, we are going to skip a candidate, while not adding it. Thus, the structure looks a little different.
+
+```
+if(it is poosible to skip)
+    recur(next char, skip this parenthesis)
+recur(next char, add this parenthesis)
+```
+The logic is same as regular backtrack. We need to **undo a candidate after calling recursion on next candidate**. 
 
 ###The Code
 
