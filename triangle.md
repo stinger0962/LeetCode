@@ -16,6 +16,37 @@ The minimum path sum from top to bottom is ```11``` (i.e., 2 + 3 + 5 + 1 = 11).
 
 ---
 
+###Analysis
+
+First, let's define a two dimensional array to represents nodes in the triangle.
+
+a[i][j] represents a node at row i and column j. Both i and j are zero based.
+
+Our goal is to find the min sum to bottom of node a[0][0].
+
+Intuitively, we can write the following equation:
+
+
+```a[0][0] = min(a[1][0], a[1][1]) + a[0][0]```
+
+Follow this pattern, we can find the **formular** we need for any node a[i][j] in the triangle
+
+```a[i][j] = min(a[i+1][j], a[i+1][j+1]) + a[i][j]```
+
+The **starting status** is the nodes in the bottom, of which min sum equal to themselves.
+
+###Bottom-up DP
+
+Recall that DP has two patterns, top-down and bottom-up.
+
+Bottom-up DP starts building up solution from starting status, our solution is the last one in the sequence.
+
+Inversely, top-down DP starts from the solution we want, the starting status is the last one in the sequence.
+
+In this problem we will not get to a[0][0] until last step. Thus It is a Bottom-up DP.
+
+
+
 ###The Code
 
 **Solution Using O(N*N) Extra Space**
