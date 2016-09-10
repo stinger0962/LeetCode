@@ -11,6 +11,7 @@
    * [1.7 Contains Duplicate I, II, III](contains_duplicate.md)
    * [1.8 Pascal's Triangle I, II](pascals_triangle.md)
    * [1.9 Valid Parentheses](valid_parentheses.md)
+   * Best Time to Buy and Sell Stock
 * [2. Tree](tree.md)
    * [2.1 Symmetric Tree](21_symmetric_tree.md)
    * [2.2 Binary Tree Level Order Traversal](binary_tree_level_order_traversal.md)
