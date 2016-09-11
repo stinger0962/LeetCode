@@ -76,6 +76,7 @@
    * [11.3 Regular Expression Matching](regular_expression_matching.md)
    * [11.4 Distinct Subsequences](distinct_subsequences.md)
    * [Triangle](triangle.md)
+   * Maximal Square
 * [12. Heap](heap.md)
    * [12.1 The Skyline Problem](the_skyline_problem.md)
 
