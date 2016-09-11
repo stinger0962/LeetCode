@@ -102,3 +102,71 @@ public:
     }
 };
 ```
+
+
+
+
+---
+
+
+###III
+
+Say you have an array for which the ith element is the price of a given stock on day i.
+
+Design an algorithm to find the maximum profit. You may complete at most two transactions.
+
+Note:
+**You may not engage in multiple transactions at the same time **(ie, you must sell the stock before you buy again).
+
+
+
+---
+
+###Time Complexity O(N) Solution
+
+This problem is tightly related to I. Let's say we have our final solution where we cut the array at index i. 
+
+So we have two transactions, one ranged in P[0] to P[i], the other P[i] to P[n]. We have made max profit in both range. Otherwise, the combined profit is not maximum either.
+
+Here we go. The problem becomes to find out the index i, such that the sum of max profit of P[0]~P[i], and P[i]~P[n] is the maximum.
+
+Time complexity is still N(or 2N). 
+
+```
+In the first turn, we find the max profit for P[0]~p[i] from left to right.
+
+Then we traversal again from right to left, and compare the sum at the same time.
+```
+
+
+```
+class Solution {
+public:
+    int maxProfit(vector<int>& prices) {
+        if(prices.size() < 2){
+            return 0;
+        }
+        int minPrice = prices[0]; // The variable records the min price when traversaling from L->R
+        int maxPrice = prices[prices.size()-1]; // Accordingly max price when R->L
+        
+        vector<int> leftMaxProfit(prices.size(), 0); // Record max profit from P[0]~P[i] when traversaling from L->R
+        vector<int> rightMaxProfit(prices.size(), 0); // Record max profit from P[0]~P[i] when traversaling from L->R
+        for(int i = 1; i < prices.size(); i++){ // i is the index we make a cut
+            if(prices[i] < minPrice){
+                minPrice = prices[i];
+            }
+            leftMaxProfit[i] = prices[i] - minPrice > leftMaxProfit[i-1] ? prices[i] - minPrice : leftMaxProfit[i-1];
+        }
+        
+        int maxTotalProfit = 0; // Max total profits from two transactions. 
+        for(int i = prices.size()-2; i >= 0; i--){ // i is still the index we make a cut
+            if(prices[i] > maxPrice){
+                maxPrice = prices[i];
+            }
+            rightMaxProfit[i] = maxPrice - prices[i] > rightMaxProfit[i+1] ? maxPrice - prices[i] : rightMaxProfit[i+1];
+            maxTotalProfit = leftMaxProfit[i] + rightMaxProfit[i] > maxTotalProfit ? leftMaxProfit[i] + rightMaxProfit[i]: maxTotalProfit;
+        }
+        return maxTotalProfit;
+    }
+};
+```
