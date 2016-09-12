@@ -36,3 +36,42 @@ We will also use the following properties to calculate the height in each step.
 
 ###Time Complexity
 There are O(LogN) steps. While each step we need to find the height of the tree, which also takes O(LogN) time. Thus, the total time complexity is O(logN * logN).
+
+###The Code
+
+```
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    int countNodes(TreeNode* root) {
+        int h = height(root);
+        if(h == 0){
+            return 0;
+        }
+        // height(root) is either height(root->right)+1 or height(root->right)+2
+        if(h == height(root->right) + 1){ // left subtree is perfect tree with h-1
+            return (1 << h-1) + countNodes(root->right); // left bitwise operator a<<b is a* (2 power b)
+        }
+        else{ // right subtree is perfect tree with h-2
+            return (1 << h-2) + countNodes(root->left);
+        }
+    }
+    
+private:
+    // Calculate height of a COMPLETE tree
+    int height(TreeNode* root){
+        if(!root){
+            return 0;
+        }
+        return 1 + height(root->left);
+    }
+};
+```
