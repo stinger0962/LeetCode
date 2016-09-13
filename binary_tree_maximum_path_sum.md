@@ -74,7 +74,7 @@ The hard part of this problem is that its recursive function doesn't directly re
 class Solution {
 public:
     int maxPathSum(TreeNode* root) {
-        int bestSum = 0;
+        int bestSum = INT_MIN; // Initialization has to be int_min, think about a single root -3
         maxPathSumHelper(root, bestSum);
         return bestSum;
     }
