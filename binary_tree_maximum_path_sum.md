@@ -54,9 +54,9 @@ downpath(node->left) = max(sum(node->left), 0)
 
 downpath(node->right) = max(sum(node->right), 0)```
 
-###Use Recursion to Build up the Solution
+###Recursion Doesn't Directly Return the Solution
 
-The hard part of this problem is that its **recursive** function **doesn't directly return** what we are looking for, but we need to build our result **upon recursion of both left and right** child node.
+The hard part of this problem is that its recursive function doesn't directly return what we are looking for, but we need to find our result upon **combination of recursion of both left and right child node**.
 
 
 ###The Code
