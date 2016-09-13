@@ -65,3 +65,55 @@ Let's have a look at both recursive and iterative solutions.
 Recursion is NOT easy to understand.
 
 
+
+
+```
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    void flatten(TreeNode* root) {
+        TreeNode* flat = flattenHelper(root);
+    }
+    
+private:
+    TreeNode* flattenHelper(TreeNode* root){
+        if(!root){
+            return nullptr;
+        }
+        
+        // How we determine what to return: 
+        // First, the algorithm requires that left tail to be the right-most node in the flattened "subtree root->left",
+        // so that we can link it with the root->right
+        // ******** The key is to look at the recursive call ********
+        // Look at flattenHelper(root->left), it returns the right-most node in the flattened "subtree root->left"
+        // Therefore, for flattenHelper(root), it returns the right-most node in the flattened "tree root", 
+        // and that is right tail, if it exists.
+        // If right tail DNE, then root->right DNE. 
+        // Thus root only have left subtree, the right-most of "tree root" is the right-most of "subtree root->left"
+        TreeNode* leftTail = flattenHelper(root->left); 
+        TreeNode* rightTail = flattenHelper(root->right);
+        // If left tail exists, apply the algorithm; otherwise, left subtree DNE, no move required
+        if(leftTail){
+            leftTail->right = root->right;
+            root->right = root->left;
+            root->left = nullptr;
+        }
+        // Return value
+        if(rightTail){
+            return rightTail;
+        }
+        if(leftTail){
+            return leftTail;
+        }
+        return root;
+    }
+};
+```
