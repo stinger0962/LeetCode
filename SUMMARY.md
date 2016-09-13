@@ -30,6 +30,7 @@
    * [2.15 Flatten Binary Tree to Linked List](flatten_binary_tree_to_linked_list.md)
    * [2.16 Populating Next Right Pointers in Each Node](populating_next_right_pointers_in_each_node.md)
    * [2.17 Count Complete Tree Nodes](count_complete_tree_nodes.md)
+   * Binary Tree Maximum Path Sum
 * [3. Linked List](linked_list.md)
    * [3.1 Add Two Numbers](add_two_numbers.md)
    * [3.2 Remove Linked List Elements](remove_linked_list_elements.md)
