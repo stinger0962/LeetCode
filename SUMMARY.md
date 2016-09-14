@@ -83,5 +83,5 @@
 * [12. Heap](heap.md)
    * [12.1 The Skyline Problem](the_skyline_problem.md)
 * [13. Divide and Conquer](divide_and_conquer.md)
-   * Merge K Sorted Lists
+   * [Merge K Sorted Lists](merge_k_sorted_lists.md)
 
