@@ -90,23 +90,29 @@ private:
         }
         
         // How we determine what to return: 
-        // First, the algorithm requires that left tail to be the right-most node in the flattened "subtree root->left",
-        // so that we can link it with the root->right
-        // ******** The key is to look at the recursive call ********
-        // Look at flattenHelper(root->left), it returns the right-most node in the flattened "subtree root->left"
-        // Therefore, for flattenHelper(root), it returns the right-most node in the flattened "tree root", 
-        // and that is right tail, if it exists.
-        // If right tail DNE, then root->right DNE. 
-        // Thus root only have left subtree, the right-most of "tree root" is the right-most of "subtree root->left"
+        // First, let's define the left tail to be the right-most node in the flattened "subtree of root->left",
+        // Left tail is to be linked with root->right 
+        // The key is to look at the recursive call on root->left and on root together
+        
+        // Our goal is to let flattenHelper(root->left) return the right-most node in the flattened "subtree of root->left"
+        // Therefore, flattenHelper(root) will return the right-most node in the flattened "tree of root" 
+        // If root->right exists, returning node is also the right-most node in "subtree of root->right", 
+        // which is flattenHelper(root->right)
+        // If root->right DNE, returnning node is the right-most node in "subtree of root->left", 
+        // which is flattenHelper(root->left)
+        
+        // Call recursive on both left and right child to get two useful pointers
         TreeNode* leftTail = flattenHelper(root->left); 
         TreeNode* rightTail = flattenHelper(root->right);
-        // If left tail exists, apply the algorithm; otherwise, left subtree DNE, no move required
+        
+        // If left tail exists, flatten the left subtree, link left tail with root->right;
+        // If left tail DNE, left subtree DNE, no movement required
         if(leftTail){
             leftTail->right = root->right;
             root->right = root->left;
             root->left = nullptr;
         }
-        // Return value
+        // RETURN
         if(rightTail){
             return rightTail;
         }
