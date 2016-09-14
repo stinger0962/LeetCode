@@ -56,7 +56,7 @@ For each node, we want to cut its left, move it to right, and append right to so
                                  R
 ```
 
-So where is the somewhere else? We see that the flattened tree is a pre-order traversal. Thus, node->right should be appended to the right-most node of node->left subtree.
+So where is the somewhere else? We see that the flattened tree is a pre-order traversal. Thus, node->right should be appended to the right-most node in the subtree of root->left. We call this node **left tail**.
 
 Let's have a look at both recursive and iterative solutions. 
 
@@ -64,6 +64,12 @@ Let's have a look at both recursive and iterative solutions.
 
 Recursion is NOT easy to understand.
 
+Our goal is to find the key node -- **left tail**, for each node in the tree.
+
+In our recursion, flattenHelper(node), we will do two things:
+
+1. Find and return left tail of the node
+2. Append node->right to left tail, and set node->left to nullptr.
 
 
 
