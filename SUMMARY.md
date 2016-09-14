@@ -82,5 +82,5 @@
    * [11.6 Maximal Square](maximal_square.md)
 * [12. Heap](heap.md)
    * [12.1 The Skyline Problem](the_skyline_problem.md)
-* Divide and Conquer
+* [Divide and Conquer](divide_and_conquer.md)
 
