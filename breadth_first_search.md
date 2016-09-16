@@ -8,4 +8,6 @@ In this chapter, we will look into different scenarios that are best solved by a
 
 ###Known Applications
 
-1. In *14.1 Word Ladder*, we are searching for a **shortest route**, and it is **easy to identify all valid neighbors**.
+1. *Find Shortest Path *
+
+In *14.1 Word Ladder*, we are searching for a shortest path, and it is easy to identify all valid neighbors.
