@@ -1,5 +1,19 @@
 # Word Ladder I
 
+
+
+---
+
+Word Ladder II is a combination of BFS finding shortest path and DFS backtracking.
+
+For more informations, refer to *10.8 Word Ladder II*
+
+
+
+---
+
+
+
 Given two words (beginWord and endWord), and a dictionary's word list, find the length of shortest transformation sequence from beginWord to endWord, such that:
 
 Only one letter can be changed at a time
