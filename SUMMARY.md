@@ -75,7 +75,7 @@
    * [10.5 Permutations I, II](permutations_i,_ii.md)
    * [10.6 Generate Parentheses](generate_parentheses.md)
    * [10.7 Remove Invalid Parentheses](remove_invalid_parentheses.md)
-   * [Word Ladder II](word_ladder_ii.md)
+   * [10.8 Word Ladder II](word_ladder_ii.md)
 * [11. Dynamic Programming](dynamic_programming.md)
    * [11.1 House Robber](house_robber.md)
    * [11.2 House Robber II(Cycle)](house_robber_iicycle.md)
