@@ -36,3 +36,12 @@ This is a comprehensive problem involved in both BFS(finding shortest path), and
 For more details about BFS, please refer to *14.1 Word Ladder I*.
 
 
+###How we connect BFS with DFS
+
+In this section, we will discuss how we construct BFS and DFS, and how we combine these two algorithm into one.
+
+**In summary, we set up a graph and define valid moves in BFS, apply backtracking on the graph in DFS.**
+
+First, let's have a look at BFS. Different from the previous one in the series, we 
+
+
