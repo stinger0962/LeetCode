@@ -44,11 +44,11 @@ In this section, we will discuss how we construct BFS and DFS, and how we combin
 
 First, let's have a look at BFS. 
 
-1. We still use a queue to maintain traversal in BFS.
+1. We still use a queue to do traversal in BFS.
 2. Maintain a ```map<string, vector<string>>``` to represent an **adjacent graph**, which stores pairs of word and all of its valid next words.
 3. Maintain a ```map<string, int>``` to represent a word and the shortest steps taken to transform from start word. This map will be used to **validate** if **moves** from word to word satisfy shortest path requirement.
 
-**3 is key**, and 3 stand because of the following statement.
+**3 is key**, and 3 stands because of the following statement.
 
 Each word, if they are able to be transformed, has its own shortest path. 
 
