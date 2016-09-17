@@ -36,11 +36,11 @@ This is a comprehensive problem involved in both BFS(finding shortest path), and
 For more details about BFS, please refer to *14.1 Word Ladder I*.
 
 
-###How we connect BFS with DFS
-
-In this section, we will discuss how we construct BFS and DFS, and how we combine these two algorithm into one.
+We will discuss how we construct BFS and DFS, and how we combine these two algorithm into one.
 
 **In summary, we set up an adjacent graph and define valid moves in BFS, apply backtracking on the graph in DFS.**
+
+###Breadth First Search
 
 First, let's have a look at BFS. 
 
@@ -70,6 +70,26 @@ C. ```start->->->mid->end```
 
 In the shortest path from start to end, steps to mid(3) equals to the shortest path from start to mid(3).
 
+###Depth First Search
 
+Now, let's have a look at DFS. 
 
+In BFS, we have set up an adjacent graph (```map<string, vector<string>>```) and a collection of valid moves (```map<string, int>```). In DFS, we will traversal the graph, and find all shortest paths.
 
+```
+DFSRecur(string curr)
+For the current word curr, loop through its next words 
+  If shortest path of a next word == shortest path of curr + 1, then the next word is a candidate
+    Push candidate to the solution
+    DFSRecur(candidate)
+    Remove candidate from solution ```
+
+We can see that the structure in DFS is that of a typical backtracking algorithm.
+
+The hard core of this problem is how to construct an adjacent graph and define valid moves in BFS.
+
+###The Code
+
+```
+
+```
