@@ -73,7 +73,6 @@
    * [10.3 Combination Sum I, II, III](combination_sum_i,_ii,_iii.md)
    * [10.4 Subsets I, II](subsets_i,_ii.md)
    * [10.5 Permutations I, II](permutations_i,_ii.md)
-   * [10.8 Word Ladder II](word_ladder_ii.md)
    * [10.6 Generate Parentheses](generate_parentheses.md)
    * [10.7 Remove Invalid Parentheses](remove_invalid_parentheses.md)
 * [11. Dynamic Programming](dynamic_programming.md)
@@ -88,5 +87,6 @@
 * [13. Divide and Conquer](divide_and_conquer.md)
    * [13.1 Merge K Sorted Lists](merge_k_sorted_lists.md)
 * [14. Breadth First Search](breadth_first_search.md)
+   * [10.8 Word Ladder II](word_ladder_ii.md)
    * [14.1 Word Ladder I](word_ladder_i.md)
 
