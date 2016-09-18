@@ -88,5 +88,5 @@
    * [13.1 Merge K Sorted Lists](merge_k_sorted_lists.md)
 * [14. Breadth First Search](breadth_first_search.md)
    * [14.1 Word Ladder I](word_ladder_i.md)
-   * [10.8 Word Ladder II](word_ladder_ii.md)
+   * [14.2 Word Ladder II](word_ladder_ii.md)
 
