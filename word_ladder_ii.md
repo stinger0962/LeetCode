@@ -91,5 +91,74 @@ The hard core of this problem is how to construct an adjacent graph and define v
 ###The Code
 
 ```
+class Solution {
+public:
+    vector<vector<string>> findLadders(string beginWord, string endWord, unordered_set<string> &wordList) {
+        int len = beginWord.size();
+        unordered_map<string, vector<string>> adjGraph; // Store pair of word and its next words 
+        unordered_map<string, int> validMoves; // Define valid moves for a word (shortest path to a word)
+        queue<string> bfsQueue; // BFS queue
+        
+        wordList.erase(beginWord);
+        wordList.insert(endWord);
+        bfsQueue.push(beginWord);
+        validMoves[beginWord] = 0;
+        
+        // BFS
+        while(!bfsQueue.empty()){
+            string word = bfsQueue.front();
+            bfsQueue.pop();
+            // We end the loop when first encountering the target word
+            // We do not need to traversal all the words on the same level as target words
+            // If there are other ways to reach target word with same steps, they are already considered in the last level
+            if(word == endWord) break;
+            string temp = word;
+            vector<string> nextWords;
+            for(int i = 0; i < len; i++){
+                for(char ch = 'a'; ch <= 'z'; ch++){
+                    word[i] = ch;
+                    if(wordList.find(word) != wordList.end()){
+                        nextWords.push_back(word);
+                        if(validMoves.find(word) == validMoves.end()){
+                            validMoves[word] = validMoves[temp] + 1;
+                            bfsQueue.push(word);
+                        }
+                    }
+                    word = temp;
+                }
+            }
+            adjGraph[word] = nextWords;
+        }
+        
+        // DFS
+        vector<vector<string>> solution;
+        vector<string> path;
+        path.push_back(beginWord);
+        dfsHelper(beginWord, endWord, path, solution, adjGraph, validMoves);
+        return solution;
+    }
+private:
+    // DFS
 
+    void dfsHelper(string currWord, string endWord, vector<string>& path, vector<vector<string>>& solution, 
+        unordered_map<string, vector<string>>& adjGraph, unordered_map<string, int>& validMoves){
+            // Notice that the only ending condition is when we reach endword
+            // We don't know the shortest path to endword since we don't enter its loop in BFS
+            if(currWord == endWord){
+                solution.push_back(path);
+                return;
+            }
+            
+            vector<string> nextWords = adjGraph[currWord];
+            for(auto word : nextWords){
+                if(validMoves[word] == validMoves[currWord] + 1){
+                    path.push_back(word);
+                    dfsHelper(word, endWord, path, solution, adjGraph, validMoves);
+                    path.pop_back();
+                }
+            }
+        }
+    
+
+};
 ```
