@@ -90,6 +90,6 @@
 * [14. Breadth First Search](breadth_first_search.md)
    * [14.1 Word Ladder I](word_ladder_i.md)
    * [14.2 Word Ladder II](word_ladder_ii.md)
-* [Stack](stack.md)
+* [15. Stack](stack.md)
    * [15.1 Basic Calculator](basic_calculator.md)
 
