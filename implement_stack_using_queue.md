@@ -25,6 +25,8 @@ We can simulate s stack using queue by either changing the behavior of queue's `
 
 ###Changing pop()
 
+
+
 ```
 class Stack {
 public:
