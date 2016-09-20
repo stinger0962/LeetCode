@@ -37,6 +37,7 @@
    * [3.3 Reverse Linked List](reverse_linked_list.md)
    * [3.4 Merge Two Sorted Lists](merge_two_sorted_lists.md)
    * [3.5 Swap Nodes in Pairs](swap_nodes_in_pairs.md)
+   * Reverse Nodes in k-Group
 * [4. Hash Table](hash_table.md)
    * [4.1 Happy Number](happy_number.md)
 * [5. Bitwise Operator](bitwise_operator.md)
