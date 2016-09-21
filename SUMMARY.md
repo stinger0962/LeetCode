@@ -70,6 +70,7 @@
    * [9.7 Remove Nth Node From End of List](remove_nth_node_from_end_of_list.md)
    * [9.8 Valid Palindrome](9.8 valid_palindrome.md)
    * [9.9 Remove Duplicate from Sorted Array](remove_duplicate_from_sorted_array.md)
+   * Remove Element
 * [10. Backtracking](backtracking.md)
    * [10.1 Path Sum II](path_sum_ii.md)
    * [10.2 Word Search II (Word Board)](word_search_ii_word_board.md)
