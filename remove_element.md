@@ -86,6 +86,8 @@ public:
         int n = nums.size();
         int i = 0;
         while(i < n){
+            // When a target element is found, swap it with the last element
+            // Then erase the last element, and reduce array size by 1
             if(nums[i] == val){
                 nums[i] = nums[n-1];
                 nums.erase(nums.begin() + n - 1);
