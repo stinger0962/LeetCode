@@ -12,7 +12,7 @@
    * [1.8 Pascal's Triangle I, II](pascals_triangle.md)
    * [1.9 Valid Parentheses](valid_parentheses.md)
    * [1.10 Best Time to Buy and Sell Stock I, II, III](best_time_to_buy_and_sell_stock.md)
-   * Longest Consecutive Sequence
+   * [Longest Consecutive Sequence](longest_consecutive_sequence.md)
 * [2. Tree](tree.md)
    * [2.1 Symmetric Tree](21_symmetric_tree.md)
    * [2.2 Binary Tree Level Order Traversal](binary_tree_level_order_traversal.md)
