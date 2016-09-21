@@ -53,16 +53,20 @@ public:
         // All actions in the loop takes O(1), so the total takes O(n) 
         for(int n : nums){
             if(myHash.count(n) == 0){
+                // Retrieve value for both neighbors
                 int left = myHash.count(n-1) ? myHash[n-1] : 0;
                 int right = myHash.count(n+1) ? myHash[n+1] : 0;
                 int sum = left + right + 1;
+                // Insert new value
                 myHash[n] = sum;
                 maxLen = max(maxLen, sum);
                 
+                // Update both boundaries of the sequence
+                // If left/right = 0, nothing is updated
                 myHash[n-left] = sum;
                 myHash[n+right] = sum;
             }
-            // Duplicate
+            // Skip duplicate numbers
             else{
                 continue;
             }
