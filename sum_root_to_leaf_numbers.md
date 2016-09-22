@@ -103,6 +103,10 @@ Logic is as below:
 2. Each leaf node is counted only once
 3. Return value: the sum of all root-to-leaf numbers
 
+Code is short, but personally I prefer use backtracking as it is more systematical and practical.
+
+To me, the second solution looks more like an invention by genius. I can enjoy its beauty, but can't  expect myself do the same in a new situation:X
+
 ```
 /**
  * Definition for a binary tree node.
