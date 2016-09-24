@@ -105,6 +105,8 @@ Find(Node A)
 
 ---
 
+###The Code
+
 
 
 *DFS -- starting from borders.*
@@ -214,3 +216,84 @@ void bfs(vector<vector<char>>& board, int row, int col, queue<pair<int, int>>& q
 ```
 
 *BFS --  Union Find*
+
+We can still improve this solution by introducing a struct which **encapsulates** the union set data structure.
+
+```
+class Solution {
+
+vector<int> unionSet; // 1D array representing cells
+vector<bool> isOpen; // 1D array representing if a cell is in an open area
+
+public:
+    void solve(vector<vector<char>>& board) {
+        if(board.empty()) return;
+        int rows = board.size();
+        int cols = board[0].size();
+        
+        unionSet.resize(rows*cols);
+        isOpen.resize(rows*cols);
+        // Initialization:
+        // Put each cell to a separate subset of which root is itself
+        // Set isOpen of O cells on boundaries to true
+        for(int i = 0; i < rows*cols; i++){
+            unionSet[i] = i;
+            int row = i / cols;
+            int col = i % cols;
+            if((row == 0 && board[row][col] == 'O') || (row == rows - 1 && board[row][col] == 'O')
+                || (col == 0 && board[row][col] == 'O') || (col == cols - 1 && board[row][col] == 'O')){
+                    isOpen[i] = true;
+                }
+        }
+        
+        // Union:
+        // From bottom, union each O cell to the cell to its above if they have same value
+        for(int j = 0; j < cols; j++){
+            for(int i = rows - 1; i > 0; i--){
+                if((board[i][j] == 'O') && (board[i][j] == board[i-1][j])){
+                    unionTwoCells(i*cols + j, (i-1)*cols + j);
+                }
+            }
+        }
+        // From left, union each O cell to the cell to its right if they have same value
+        for(int i = 0; i < rows; i++){
+            for(int j = 0; j < cols - 1; j++){
+                if((board[i][j] == 'O') && board[i][j] == board[i][j+1]){
+                    unionTwoCells(i*cols + j, i*cols + j + 1);
+                }
+            }
+        }
+        
+        // Flip:
+        // Flip all O cells that are not in an open area
+        for(int i = 0; i < rows*cols; i++){
+            int row = i / cols;
+            int col = i % cols;
+            // Check isOpen of root cell to see whether the subset is open or surrounded
+            if(board[row][col] == 'O' && isOpen[findCell(i)] == false){
+                board[row][col] = 'X';
+            }
+        }
+    }
+    
+private:
+    // Union two cells
+    // a,b : index of cells in the 1D array
+    // Each time we union two cells, we update isOpen of root cell of the new subset
+    void unionTwoCells(int a, int b){
+        int rootA = findCell(a);
+        int rootB = findCell(b);
+        unionSet[rootA] = rootB;
+        isOpen[rootB] = isOpen[rootA] || isOpen[rootB];
+    }
+    
+    // Find root for a cell
+    // a: index of a cell in the 1D array
+    int findCell(int a){
+        if(unionSet[a] == a) return a; // a is root of its subset
+        unionSet[a] = findCell(unionSet[a]); // path compression
+        return unionSet[a];
+    }
+    
+};
+```
