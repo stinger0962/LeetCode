@@ -32,7 +32,7 @@
    * [2.16 Populating Next Right Pointers in Each Node](populating_next_right_pointers_in_each_node.md)
    * [2.17 Count Complete Tree Nodes](count_complete_tree_nodes.md)
    * [2.18 Binary Tree Maximum Path Sum](binary_tree_maximum_path_sum.md)
-   * Invert Binary Tree
+   * [Invert Binary Tree](invert_binary_tree.md)
 * [3. Linked List](linked_list.md)
    * [3.1 Add Two Numbers](add_two_numbers.md)
    * [3.2 Remove Linked List Elements](remove_linked_list_elements.md)
