@@ -217,7 +217,7 @@ void bfs(vector<vector<char>>& board, int row, int col, queue<pair<int, int>>& q
 
 *BFS --  Union Find*
 
-We can still improve this solution by introducing a struct which **encapsulates** the union set data structure.
+We can still improve this solution by introducing a struct which **encapsulates** the union set data structure. (like tree node)
 
 ```
 class Solution {
