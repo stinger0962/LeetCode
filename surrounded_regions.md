@@ -51,13 +51,55 @@ Finally, we flip temporary mark back to O.
 
 We provide both DFS and BFS solution which is based on this idea.
 
-###Another BFS Solution Using Union Find
+###BFS Solution Using Union Find
 
 We can use union find data structure to solve the problem.
 
-The idea is to **union** all 'O' cells on boundaries to a dummy head, and **union** all neighboring 'O' cells.
+Main steps are as below:
 
-Then we can tell that if an 'O' cell is surrounded by checking if it is connected to a dummy head.
+**Compress 2D into 1D**:
+
+Create an 1D array as union set, where ```row = index / width, col = index % width```.
+
+Create a 1D bool array which represents whether an O node belongs to an open area or not.
+
+**Initialization**:
+
+Each node is the root of its own subset.
+
+Set bool value of O nodes on boundaries to T.
+
+**Union**:
+
+Starting from bottom, union each node to its above node if they equal to each other.
+
+Starting from left, union each node to its right node if they equal to each other.
+
+**Flip Surrounded O**:
+
+Loop through all O nodes, if bool value of ```Find(node)``` is False, flip it to X node. 
+
+**Union Function**:
+```
+Union(Node A, Node B):
+    RootA = Find(A)
+    RootB = Find(B)
+    unionSet(RootA) = RootB
+    RootB.isOpen = RootA.isOpen || RootB.isOpen
+```
+**Find Function**: 
+
+  We use **path compressing** in find function to optimize the union set.
+  
+  In ```Find(A)```, we update value of union set of all the nodes from ```A``` to ```rootA```. These values all become ```rootA``` so that next time we call ```find()``` on these nodes, time complexity is O(1).
+
+```
+Find(Node A)
+  if(unionSet(A) == A) return A
+  unionSet(A) = Find(unionSet(A))
+  return unionSet(A)
+```
+
 
 
 
