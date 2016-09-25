@@ -100,5 +100,5 @@
 * [15. Stack](stack.md)
    * [15.1 Basic Calculator](basic_calculator.md)
    * [15.3 Implement Stack using Queue](implement_stack_using_queue.md)
-   * Basic Calculator II
+   * [Basic Calculator II](basic_calculator_ii.md)
 
