@@ -99,5 +99,5 @@
    * [14.3 Surrounded Regions](surrounded_regions.md)
 * [15. Stack](stack.md)
    * [15.1 Basic Calculator](basic_calculator.md)
-   * [Implement Stack using Queue](implement_stack_using_queue.md)
+   * [15.3 Implement Stack using Queue](implement_stack_using_queue.md)
 
