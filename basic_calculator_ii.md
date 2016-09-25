@@ -137,3 +137,41 @@ public:
 
 *A Smart Solution*
 
+```
+class Solution {
+    
+public:
+    int calculate(string s) {
+        stack<int> myStack;
+        int res = 0;
+        int num = 0;
+        char op = '+';
+        for(int i = 0; i < s.size(); i++){
+            char ch = s[i];
+            // Read number and consecutive numbers
+            if(isdigit(ch)){
+                num = num * 10 + ch - '0';
+            }
+            // i == size()-1 means we need one more operation after reading last number
+            if(ch == '+' || ch == '-' || ch == '*' || ch == '/' || i == s.size()-1){
+                if(op == '+' || op == '-'){
+                    int temp = (op == '+') ? num : -num;
+                    myStack.push(temp); // Push segmented result onto stack
+                    res += temp;
+                }
+                else{
+                    res -= myStack.top();
+                    int temp = (op == '*') ? myStack.top() * num : myStack.top() / num;
+                    myStack.pop();
+                    myStack.push(temp);
+                    res += temp;
+                }
+                // Update operator and clear number
+                op = ch;
+                num = 0;
+            }
+        }
+        return res;
+    }
+};
+```
