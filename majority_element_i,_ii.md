@@ -43,4 +43,32 @@ Note: Alongside with the 2nd problem in its series, we want to achieve a solutio
          count--
  ```
   
+ ###The Code
  
+ ```
+ class Solution {
+public:
+    // Moore's Majority Vote Algorithm, return the element that appears most frequently in the array
+    // Based on the assumption that the majority number exists, major is guaranteed to be the one we are looking for
+    // Sweep from left to right, majority number(current) will vote up and other numbers will vote down
+    // When counter is down to zero, a new number takes control of MN
+    // counter doesn't have any meaning after the loop is done
+    int majorityElement(vector<int>& nums) {
+        int major = nums[0];
+        int count = 1;
+        for(int i = 1; i < nums.size(); i++){
+            if(count == 0){
+                major = nums[i];
+                count++;
+            }
+            else if(major == nums[i]){
+                count++;
+            }
+            else{
+                count--;
+            }
+        }
+        return major;
+    }
+};
+ ```
