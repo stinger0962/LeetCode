@@ -1,4 +1,4 @@
-# Solutions to LeetCode OJ
+# Study of Algorithm
 
 This book is a record of my endeavor to understand algorithm both in depth and breadth in the course of solving LeetCode problems.
 
