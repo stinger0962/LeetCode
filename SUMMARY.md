@@ -91,7 +91,7 @@
    * [11.4 Distinct Subsequences](distinct_subsequences.md)
    * [11.5 Triangle](triangle.md)
    * [11.6 Maximal Square](maximal_square.md)
-   * Minimum Path Sum
+   * [Minimum Path Sum](minimum_path_sum.md)
 * [12. Heap](heap.md)
    * [12.1 The Skyline Problem](the_skyline_problem.md)
 * [13. Divide and Conquer](divide_and_conquer.md)
