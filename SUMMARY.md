@@ -92,7 +92,7 @@
    * [11.5 Triangle](triangle.md)
    * [11.6 Maximal Square](maximal_square.md)
    * [11.7 Minimum Path Sum](minimum_path_sum.md)
-   * Dungeon Game
+   * [Dungeon Game](11.8 dungeon_game.md)
 * [12. Heap](heap.md)
    * [12.1 The Skyline Problem](the_skyline_problem.md)
 * [13. Divide and Conquer](divide_and_conquer.md)
