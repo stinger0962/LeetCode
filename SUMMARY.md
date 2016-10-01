@@ -106,4 +106,5 @@
    * [15.2 Basic Calculator II](basic_calculator_ii.md)
    * [15.3 Implement Stack using Queue](implement_stack_using_queue.md)
 * [16. Binary Search](binary_search.md)
+   * Smallest Rectangle Enclosed Black Pixel
 
