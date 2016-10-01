@@ -46,6 +46,8 @@ To be concise, there are two notable maneuvers.
 
 2. To implement this asymmetric function beautifully, we will use some **uncommon combination of logical operators**.
 
+3. For further **optimization**, We use two additional parameters to limit the range of scanning when projecting pixels.
+
 Details are provided in the comments.
 
 ###The Code
