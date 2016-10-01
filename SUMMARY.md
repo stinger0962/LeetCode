@@ -105,5 +105,5 @@
    * [15.1 Basic Calculator](basic_calculator.md)
    * [15.2 Basic Calculator II](basic_calculator_ii.md)
    * [15.3 Implement Stack using Queue](implement_stack_using_queue.md)
-* Binary Search
+* [Binary Search](binary_search.md)
 
