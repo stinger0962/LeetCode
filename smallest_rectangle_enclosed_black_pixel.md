@@ -40,11 +40,13 @@ Our task is thus to find the left and right boundary of the a sequence of contin
 
 Even though we have come up with the proper algorithm, we still have to tackle several hazards in the implementation.
 
-To be concise:
+To be concise, there are two notable maneuvers.
 
-We search for index of boundary 1 in the left part, and index of boundary 0 in the right part in the **same function**. Difference of these indexes is the width of the target rectangle.
+1. We search for index of boundary 1 in the left part, and index of boundary 0 in the right part in the **same function**. Difference of these indexes is the width of the target rectangle.
 
-To implement this asymmetric function beautifully, we will introduce some tricks. Details see comments.
+2. To implement this asymmetric function beautifully, we will use some **uncommon combination of logical operators**.
+
+Details are provided in the comments.
 
 ###The Code
 
