@@ -93,7 +93,7 @@
    * [11.6 Maximal Square](maximal_square.md)
    * [11.7 Minimum Path Sum](minimum_path_sum.md)
    * [11.8 Dungeon Game](11.8 dungeon_game.md)
-   * Range Sum Query I, II
+   * [Range Sum Query I, II](range_sum_query_i,_ii.md)
 * [12. Heap](heap.md)
    * [12.1 The Skyline Problem](the_skyline_problem.md)
 * [13. Divide and Conquer](divide_and_conquer.md)
