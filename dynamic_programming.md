@@ -33,7 +33,7 @@ In **recursion** some subproblems may occur multiple times, uncessary subproblem
 In **Dynamic Programming**, each subproblem is solved once no matter if it's necessary or not.
 
 
-###Two-dimensional DP Table
+###Building Two-dimensional DP Table
 
 During the course of practice, I've observed several rules regarding 2D DP table. 
 
