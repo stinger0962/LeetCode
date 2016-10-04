@@ -114,3 +114,35 @@ As with the 1st in series, we will add a dummy col and a dummy row to the top le
 
 ###The Code
 
+```
+class NumMatrix {
+    vector<vector<int>> sumTable;
+public:
+    // DP: Dynamic table: sum[i][j] represents accumulated sum from matrix[0][0] to matrix[i][j]
+    NumMatrix(vector<vector<int>> &matrix) {
+        int m = matrix.size();
+        int n = m == 0 ? 0 : matrix[0].size();
+        vector<vector<int>> temp(m+1, vector<int>(n+1,0)); // Top line and left most column are dummies
+        
+        // Building the DP table
+        for(int i = 1; i <= m; i++){
+            for(int j = 1; j <= n; j++){
+                temp[i][j] = temp[i-1][j] + temp[i][j-1] - temp[i-1][j-1] + matrix[i-1][j-1];
+            }
+        }
+        
+        sumTable = temp;
+    }
+    // Index in the call is a little tricky.
+    // The best practice to understand the algorithm is to draw a table and try an example
+    int sumRegion(int row1, int col1, int row2, int col2) {
+        return sumTable[row2+1][col2+1] - sumTable[row1][col2+1] - sumTable[row2+1][col1] + sumTable[row1][col1]; 
+    }
+};
+
+
+// Your NumMatrix object will be instantiated and called as such:
+// NumMatrix numMatrix(matrix);
+// numMatrix.sumRegion(0, 1, 2, 3);
+// numMatrix.sumRegion(1, 2, 3, 4);
+```
