@@ -31,4 +31,13 @@ Both methods break down a complex problem into subproblems, yet their approaches
 In **recursion** some subproblems may occur multiple times, uncessary subproblems are not solved.
 
 In **Dynamic Programming**, each subproblem is solved once no matter if it's necessary or not.
-  
+
+
+###Two-dimensional DP Table
+
+During the course of practice, I've observed several rules regarding 2D DP table. 
+
+1. **Be clear**. The first step is to make clear what **each cell represents**, and how/if it contributes to the final solution. A wrong choice can be misleading and it is easy to make such a mistake in some scenarios.
+2. **Be flexible.** If an attempt to build the table from top-left to right-bottom (**bottom-up**) seems unfeasible, try to do it in the opposite direction (**top down**). 
+3. **Be familiar with patterns**. Value in ```DP[i][j]``` is usually a combination of its **vertical and horizontal neighbors**.(i.e. ```DP[i-1][j] and DP[i][j-1]```, depending on the direction of building) 
+But in many times, it is also has something to do with its **diagonal neighbor**.(i.e. ```DP[i-1][j-1]```)
