@@ -32,11 +32,12 @@ Operation #3: addLand(1, 2) turns the water at grid[1][2] into a land.```
 0 0 0
 Operation #4: addLand(2, 1) turns the water at grid[2][1] into a land.```
 
+```
 1 1 0
 0 0 1   Number of islands = 3
 0 1 0
-We return the result as an array: [1, 1, 2, 3]
+We return the result as an array: [1, 1, 2, 3]```
 
 Challenge:
 
-Can you do it in time complexity O(k log mn), where k is the length of the positions?
+Can you do it in time complexity ```O(k log mn)```, where k is the length of the positions?
