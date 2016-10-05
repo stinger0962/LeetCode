@@ -1,6 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
+   * Union Find
 * [1. Array](array.md)
    * [1.1 Two Sum](11_two_sum.md)
    * [1.2 Median of Two Sorted Arrays](median_of_two_sorted_arrays.md)
