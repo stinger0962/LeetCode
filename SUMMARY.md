@@ -108,4 +108,5 @@
    * [15.3 Implement Stack using Queue](implement_stack_using_queue.md)
 * [16. Binary Search](binary_search.md)
    * [16.1 Smallest Rectangle Enclosed Black Pixel](smallest_rectangle_enclosed_black_pixel.md)
+* Union Find
 
