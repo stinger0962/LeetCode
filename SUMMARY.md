@@ -109,5 +109,5 @@
 * [16. Binary Search](binary_search.md)
    * [16.1 Smallest Rectangle Enclosed Black Pixel](smallest_rectangle_enclosed_black_pixel.md)
 * [17. Union Find](union_find.md)
-   * [Numbers of Islands](numbers_of_islands.md)
+   * [17.1 Numbers of Islands](numbers_of_islands.md)
 
