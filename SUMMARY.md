@@ -56,6 +56,7 @@
    * [6.7 Integer to Roman](integer_to_roman.md)
    * [6.8 Roman to Integer](roman_to_integer.md)
    * [6.9 Longest Common Prefix](longest_common_prefix.md)
+   * Additive Number
 * [7. Pure Math](pure_math.md)
    * [7.1 Count Primes](count_primes.md)
    * [7.2 Reverse Integer](reverse_integer.md)
@@ -83,7 +84,7 @@
    * [10.5 Permutations I, II](permutations_i,_ii.md)
    * [10.6 Generate Parentheses](generate_parentheses.md)
    * [10.7 Remove Invalid Parentheses](remove_invalid_parentheses.md)
-   * [Sum Root to Leaf Numbers](sum_root_to_leaf_numbers.md)
+   * [10.8 Sum Root to Leaf Numbers](sum_root_to_leaf_numbers.md)
 * [11. Dynamic Programming](dynamic_programming.md)
    * [11.1 House Robber](house_robber.md)
    * [11.2 House Robber II(Cycle)](house_robber_iicycle.md)
