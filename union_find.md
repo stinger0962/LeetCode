@@ -60,7 +60,7 @@ Union function takes at most **O(lg*N)** time.
 We will omit the proof here. Be practical!
 
 ```
-void connect(int i, int j){ // union is a keyword, so...
+void quickUnion(int i, int j){ // union is a keyword, so...
     int i = find(i);
     int j = find(j);
     if(sz[i] > sz[j]){ // If i is the larger tree
@@ -72,6 +72,14 @@ void connect(int i, int j){ // union is a keyword, so...
         sz[j] += sz[i];
     }
 }
+```
+Finally, we also have a **connected** function to check if two nodes are connected.
+
+```
+bool connected(int i, int j){
+    return find(i) == find(j);
+}
+
 ```
 
 
