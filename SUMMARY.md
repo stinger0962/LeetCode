@@ -35,6 +35,7 @@
    * [2.17 Count Complete Tree Nodes](count_complete_tree_nodes.md)
    * [2.18 Binary Tree Maximum Path Sum](binary_tree_maximum_path_sum.md)
    * [2.19 Invert Binary Tree](invert_binary_tree.md)
+   * 2.20 Range Sum Query - Mutable
 * [3. Linked List](linked_list.md)
    * [3.1 Add Two Numbers](add_two_numbers.md)
    * [3.2 Remove Linked List Elements](remove_linked_list_elements.md)
