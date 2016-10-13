@@ -2,6 +2,8 @@
 
 ##Binary Index Tree/Fenwick Tree
 
+BIT stores accumulative sums. We can retrieve the sum of first k elements, and update i-th element both in O(logN) time.
+
 *2.21 Range Sum Query 2D - Mutable*
 
 ##Segment Tree
