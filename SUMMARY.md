@@ -15,7 +15,7 @@
    * [1.11 Longest Consecutive Sequence](longest_consecutive_sequence.md)
    * [1.12 Majority Element I, II](majority_element_i,_ii.md)
    * [1.13 Summary Ranges](summary_ranges.md)
-   * Find the Celebrity
+   * [Find the Celebrity](find_the_celebrity.md)
 * [2. Tree](tree.md)
    * [2.1 Symmetric Tree](21_symmetric_tree.md)
    * [2.2 Binary Tree Level Order Traversal](binary_tree_level_order_traversal.md)
