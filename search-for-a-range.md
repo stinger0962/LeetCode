@@ -2,23 +2,24 @@ Given a sorted array of integers, find the starting and ending position of a giv
 
 Your algorithm's runtime complexity must be in the order ofO\(logn\).
 
-If the target is not found in the array, return`[-1, -1]`.
+If the target is not found in the array, return`[-1, -1].`
 
 For example,  
-Given`[5, 7, 7, 8, 8, 10]`and target value 8,  
-return`[3, 4]`.
-
-
-
-
+Given`[5, 7, 7, 8, 8, 10]and target value 8,  
+return[3, 4].`
 
 ---
-
-
 
 ## Typical Binary Search
 
 
+
+Exp earned:
+
+
+
+1.  Corner case! Corner cases are the most difficult part to handle in a binary search. Be comprehensive while designing ending condition.
+2. Do not use/store extra data if it is not asked. For this problem, do not store any other indexes except the smallest/largest one.
 
 ```
 class Solution {
@@ -39,7 +40,7 @@ public:
         }
         return result;
     }
-    
+
 private:
     // search target between [nums[lo], nums[hi]), add index to range if found
     void searchRangeRecur(vector<int>& nums, int& small, int& large, int lo, int hi, int tar) {
@@ -64,7 +65,7 @@ private:
                 searchRangeRecur(nums, small, large, mid+1, hi, tar);
             }
         }
-        
+
     }
 };
 ```
