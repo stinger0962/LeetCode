@@ -15,7 +15,8 @@ denotions
 P : the data that the problem can be solved
 c: candidate
 first(P,c): first extension of c
-next(P,s): next extension of s```
+next(P,s): next extension of s
+```
 ```
 procedure bt(c)
   if reject(P,c) then return
