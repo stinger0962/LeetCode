@@ -1,3 +1,27 @@
+Given two integers n and k, return all possible combinations of k numbers out of 1 ... n.
+
+For example,
+If n = 4 and k = 2, a solution is:
+
+
+
+
+###Solution
+
+Typical backtracking.
+
+Structure as below:
+
+
+```
+BT(para list, int index) 
+    for (j = index ~ max)
+        add(j)
+        BT(para list, j+1)
+        delete(j)
+
+```
+
 
 ```
 class Solution {
@@ -24,5 +48,6 @@ private:
         
     }
 };
+
 ```
 
