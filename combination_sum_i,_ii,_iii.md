@@ -18,7 +18,8 @@ A solution set is:
 [
   [7],
   [2, 2, 3]
-]```
+]
+```
 
 
 **Note** : The SET of candidate numbers implies that there are NO duplicate candidate numbers.
@@ -86,7 +87,8 @@ A solution set is:
   [1, 2, 5],
   [2, 6],
   [1, 1, 6]
-]```
+]
+```
 
 
 ---
