@@ -10,15 +10,18 @@
 
 ###Pseudocode
 
+
+_denotions_
+
 ```
-denotions
 P : the data that the problem can be solved
 c: candidate
 first(P,c): first extension of c
 next(P,s): next extension of s
 ```
+
+_procedure bt(c)_
 ```
-procedure bt(c)
   if reject(P,c) then return
   if accept(P,c) then output(P,c)
   s ← first(P,c)
