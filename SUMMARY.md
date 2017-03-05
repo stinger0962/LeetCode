@@ -92,6 +92,7 @@
   * [10.7 Remove Invalid Parentheses](remove_invalid_parentheses.md)
   * [10.8 Sum Root to Leaf Numbers](sum_root_to_leaf_numbers.md)
   * [10.9 Combinations](109-combinations.md)
+  * [10.10 Generalized Abbr](10.10-generalized-abbr.md)
 * [11. Dynamic Programming](dynamic_programming.md)
   * [11.1 House Robber](house_robber.md)
   * [11.2 House Robber II\(Cycle\)](house_robber_iicycle.md)

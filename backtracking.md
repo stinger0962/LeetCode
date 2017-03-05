@@ -1,15 +1,12 @@
 # Backtracking
 
+### Definition by Wiki
 
-###Definition by Wiki
+Backtracking is an algorithm for finding all \(or some\) solutions to some computational problems, notably constraint satisfaction problems.
 
-   Backtracking is an algorithm for finding all (or some) solutions to some computational problems, notably constraint satisfaction problems.
-  
-   The algorithm **incrementally builds** candidates to the solutions, and **abandons** each partial candidate c ("backtracks") as soon as it determines that c cannot possibly be completed to a valid solution.
+The algorithm **incrementally builds** candidates to the solutions, and **abandons** each partial candidate c \("backtracks"\) as soon as it determines that c cannot possibly be completed to a valid solution.
 
-
-###Pseudocode
-
+### Pseudocode
 
 _denotions_
 
@@ -20,7 +17,8 @@ first(P,c): first extension of c
 next(P,s): next extension of s
 ```
 
-_procedure bt(c)_
+_procedure bt\(c\)_
+
 ```
   if reject(P,c) then return
   if accept(P,c) then output(P,c)
@@ -29,3 +27,8 @@ _procedure bt(c)_
     bt(s)
     s ← next(P,s)
 ```
+
+
+
+
+
