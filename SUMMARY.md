@@ -38,6 +38,7 @@
   * [2.19 Invert Binary Tree](invert_binary_tree.md)
   * [2.20 Range Sum Query - Mutable](220_range_sum_query_-_mutable.md)
   * [2.21 Path Sum III](path_sum_iii.md)
+  * [2.22 Construct Binary Tree from String](222-construct-binary-tree-from-string.md)
 * [3. Linked List](linked_list.md)
   * [3.1 Add Two Numbers](add_two_numbers.md)
   * [3.2 Remove Linked List Elements](remove_linked_list_elements.md)
