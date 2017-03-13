@@ -4,8 +4,7 @@ The whole input represents a binary tree. It contains an integer followed by zer
 
 You always start to construct the**left**child node of the parent first if it exists.
 
-**Example:**  
-
+**Example:**
 
 ```
 Input:
@@ -18,14 +17,10 @@ Output:
      /   \
     2     6
    / \   / 
-  3   1 5   
-
+  3   1 5
 ```
 
-
-
-**Note:**  
-
+**Note:**
 
 1. There will only be
    `'('`
@@ -44,27 +39,19 @@ Output:
    `"()"`
    .
 
-
-
 ---
-
-
 
 The process has two parts.
 
 1. To retrieve a numeric value from string. The value could have multiple digits or +/- signs.
 
-    There is a elegant and common algorithm for this part -- memorize or be familiar with it.
+       There is a elegant and common algorithm for this part -- memorize or be familiar with it.
 
-    2. To identify the beginning and ending of left/right sub tree, thus to build the tree by recursively call the function itself.
+2.  To identify the beginning and ending of left/right sub tree, thus to build the tree by recursively call the function itself.
 
-    Core of this part is being able to recognize pair of parentheses -- the right sub tree starts when there is no more open parentheses.
-
-
+       Core of this part is being able to recognize pair of parentheses -- the right sub tree starts when there is no more open     parentheses.
 
 ---
-
-
 
 ```
 /**
@@ -98,7 +85,7 @@ public:
         if (i == sz) return root;
         int open_paren = 0; // record number of open parentheses
         int j = i; // aux index to locate the beginning of right subtree
-        
+
         // loop through the string, right subtree begins when all parentheses are paired
         for (; j < sz; ++j) {
             if (s[j] == '(')
