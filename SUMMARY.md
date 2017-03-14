@@ -17,6 +17,7 @@
   * [1.13 Summary Ranges](summary_ranges.md)
   * [1.14 Find the Celebrity](find_the_celebrity.md)
   * [1.15 Rotate Images](115-rotate-images.md)
+  * [Spiral Matrix I](spiral-matrix-i.md)
 * [2. Tree](tree.md)
   * [2.1 Symmetric Tree](21_symmetric_tree.md)
   * [2.2 Binary Tree Level Order Traversal](binary_tree_level_order_traversal.md)
